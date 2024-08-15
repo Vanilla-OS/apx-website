@@ -4,6 +4,7 @@ import Hero from "./components/Hero.vue";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import Home from "./views/Home.vue";
+import NotFound from "./views/NotFound.vue";
 
 // https://vitepress.dev/reference/runtime-api#usedata
 const { frontmatter, page } = useData();
@@ -18,6 +19,8 @@ const { frontmatter, page } = useData();
         <div v-if="frontmatter.home">
             <Home />
         </div>
+        <div v-if="page.isNotFound">
+            <NotFound />
         </div>
     </div>
     <Footer />
