@@ -4,6 +4,11 @@
             id="what-is"
             class="flex flex-col gap-8 text-center justify-center items-center"
         >
+            <img
+                src="/assets/components/ellipse-3.png"
+                alt="Blurry Circle"
+                class="absolute left-0 w-[20rem] lg:w-[40rem] select-none"
+            />
             <h2 class="text-3xl lg:text-5xl font-semibold">
                 What is <span class="text-green-500">Apx</span>?
             </h2>
@@ -47,6 +52,11 @@
                     class="w-[10rem] lg:w-[25rem]"
                 />
             </picture>
+            <img
+                src="/assets/components/ellipse-1.png"
+                alt="Blurry Circle"
+                class="absolute left-0 w-[20rem] lg:w-[40rem] select-none"
+            />
             <div class="flex flex-col gap-4 text-center lg:text-left">
                 <h2 class="text-3xl lg:text-5xl font-semibold">
                     What are
@@ -84,6 +94,11 @@
             id="stack"
             class="flex flex-row flex-wrap gap-12 justify-center items-center"
         >
+            <img
+                src="/assets/components/ellipse-2.png"
+                alt="Blurry Circle"
+                class="absolute left-0 w-[20rem] lg:w-[40rem] select-none mb-[20rem]"
+            />
             <picture>
                 <source
                     media="(prefers-color-scheme: dark)"
@@ -135,8 +150,13 @@
                     distribution, all you need is a Docker image, that’s all.
                 </p>
             </div>
+            <img
+                src="/assets/components/ellipse-3.png"
+                alt="Blurry Circle"
+                class="absolute left-0 w-[20rem] lg:w-[40rem] select-none"
+            />
             <div
-                class="flex flex-row gap-20 text-center justify-center items-center"
+                class="flex flex-row gap-6 lg:gap-20 text-center justify-center items-center"
             >
                 <a
                     href="https://rockylinux.org/"
@@ -146,7 +166,7 @@
                     <img
                         src="/assets/components/rocky.svg"
                         alt="Rocky Linux"
-                        class="w-[10rem] hover:scale-110 transition-all duration-300 ease-in-out"
+                        class="w-16 lg:w-[10rem] hover:scale-110 transition-all duration-300 ease-in-out"
                         style="filter: drop-shadow(0 0 0px transparent)"
                         onmouseover="this.style.filter='drop-shadow(0 0 10px #10b981)'"
                         onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
@@ -160,7 +180,7 @@
                     <img
                         src="/assets/components/fedora.svg"
                         alt="Fedora"
-                        class="w-[10rem] hover:scale-110 transition-all duration-300 ease-in-out"
+                        class="w-16 lg:w-[10rem] hover:scale-110 transition-all duration-300 ease-in-out"
                         style="filter: drop-shadow(0 0 0px transparent)"
                         onmouseover="this.style.filter='drop-shadow(0 0 10px #3C6EB4)'"
                         onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
@@ -174,7 +194,7 @@
                     <img
                         src="/assets/components/vanilla.svg"
                         alt="Vanilla OS"
-                        class="w-[10rem] hover:scale-110 all duration-300 ease-in-out"
+                        class="w-16 lg:w-[10rem] hover:scale-110 all duration-300 ease-in-out"
                         style="filter: drop-shadow(0 0 0px transparent)"
                         onmouseover="this.style.filter='drop-shadow(0 0 10px #f9a932)'"
                         onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
@@ -188,7 +208,7 @@
                     <img
                         src="/assets/components/ubuntu.svg"
                         alt="Ubuntu"
-                        class="w-[10rem] hover:scale-110 all duration-300 ease-in-out"
+                        class="w-16 lg:w-[10rem] hover:scale-110 all duration-300 ease-in-out"
                         style="filter: drop-shadow(0 0 0px transparent)"
                         onmouseover="this.style.filter='drop-shadow(0 0 10px #E95420)'"
                         onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
@@ -202,7 +222,7 @@
                     <img
                         src="/assets/components/arch.svg"
                         alt="Arch Linux"
-                        class="w-[10rem] hover:scale-110 all duration-300 ease-in-out"
+                        class="w-16 lg:w-[10rem] hover:scale-110 all duration-300 ease-in-out"
                         style="filter: drop-shadow(0 0 0px transparent)"
                         onmouseover="this.style.filter='drop-shadow(0 0 10px #1793D1)'"
                         onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
