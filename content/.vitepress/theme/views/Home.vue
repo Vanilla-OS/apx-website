@@ -135,11 +135,80 @@
                     distribution, all you need is a Docker image, that’s all.
                 </p>
             </div>
-            <img
-                src="/assets/components/distributions.svg"
-                alt="Multiple distributions"
-                class="w-[100rem]"
-            />
+            <div
+                class="flex flex-row gap-20 text-center justify-center items-center"
+            >
+                <a
+                    href="https://rockylinux.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="/assets/components/rocky.svg"
+                        alt="Rocky Linux"
+                        class="w-[10rem] hover:scale-110 transition-all duration-300 ease-in-out"
+                        style="filter: drop-shadow(0 0 0px transparent)"
+                        onmouseover="this.style.filter='drop-shadow(0 0 10px #10b981)'"
+                        onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
+                    />
+                </a>
+                <a
+                    href="https://fedoraproject.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="/assets/components/fedora.svg"
+                        alt="Fedora"
+                        class="w-[10rem] hover:scale-110 transition-all duration-300 ease-in-out"
+                        style="filter: drop-shadow(0 0 0px transparent)"
+                        onmouseover="this.style.filter='drop-shadow(0 0 10px #3C6EB4)'"
+                        onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
+                    />
+                </a>
+                <a
+                    href="https://vanillaos.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="/assets/components/vanilla.svg"
+                        alt="Vanilla OS"
+                        class="w-[10rem] hover:scale-110 all duration-300 ease-in-out"
+                        style="filter: drop-shadow(0 0 0px transparent)"
+                        onmouseover="this.style.filter='drop-shadow(0 0 10px #f9a932)'"
+                        onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
+                    />
+                </a>
+                <a
+                    href="https://ubuntu.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="/assets/components/ubuntu.svg"
+                        alt="Ubuntu"
+                        class="w-[10rem] hover:scale-110 all duration-300 ease-in-out"
+                        style="filter: drop-shadow(0 0 0px transparent)"
+                        onmouseover="this.style.filter='drop-shadow(0 0 10px #E95420)'"
+                        onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
+                    />
+                </a>
+                <a
+                    href="https://archlinux.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="/assets/components/arch.svg"
+                        alt="Arch Linux"
+                        class="w-[10rem] hover:scale-110 all duration-300 ease-in-out"
+                        style="filter: drop-shadow(0 0 0px transparent)"
+                        onmouseover="this.style.filter='drop-shadow(0 0 10px #1793D1)'"
+                        onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
+                    />
+                </a>
+            </div>
         </section>
     </div>
 </template>
