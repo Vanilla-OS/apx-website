@@ -21,7 +21,7 @@
                     >Get Started</a
                 >
             </div>
-            <a href="#about" class="mb-10 animate-bounce text-white">
+            <a href="#what-is" class="mb-10 animate-bounce text-white text-opacity-40 z-10">
                 <span class="material-symbols-outlined text-4xl">
                     keyboard_arrow_down
                 </span>

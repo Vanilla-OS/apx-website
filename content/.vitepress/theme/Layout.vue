@@ -3,7 +3,7 @@ import { useData } from "vitepress";
 import Hero from "./components/Hero.vue";
 
 // https://vitepress.dev/reference/runtime-api#usedata
-const { page, frontmatter } = useData();
+const { theme, frontmatter } = useData();
 </script>
 
 <template>
@@ -15,33 +15,29 @@ const { page, frontmatter } = useData();
             <div
                 class="flex flex-row items-center gap-4 sm:gap-8 font-light text-base opacity-80"
             >
-                <a href="#" class="text-white">Getting Started</a>
-                <a href="#" class="text-white">Documentation</a>
-                <a href="#" class="text-white">Support</a>
+                <a v-for="link in theme.nav.links.first" :key="link" :href="link.url" class="text-white">{{ link.text }}</a>
             </div>
         </div>
         <div
             class="flex flex-col sm:flex-row items-center justify-between px-4 sm:px-16 py-2"
         >
-            <p class="text-white opacity-40 font-normal mb-4 sm:mb-0">v2.4.3</p>
+            <p class="text-white opacity-40 font-normal mb-4 sm:mb-0">{{ theme.nav.version }}</p>
             <div
                 class="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 font-light opacity-80 text-base"
             >
                 <div class="flex flex-row items-center gap-4">
-                    <a href="#" class="text-white">Subsystems</a>
-                    <a href="#" class="text-white">Stacks</a>
-                    <a href="#" class="text-white">Package Managers</a>
+                    <a v-for="link in theme.nav.links.second" :key="link" :href="link.url" class="text-white">{{ link.text }}</a>
                 </div>
                 <div
                     class="flex flex-row sm:flex-row gap-2 justify-center items-center mt-4 sm:mt-0"
                 >
                     <a
-                        href="#"
+                        href="https://github.com/Vanilla-OS/apx"
                         class="border border-white text-white px-4 py-2 rounded-full text-base hover:bg-white hover:text-black transition duration-200"
                         >Source Code</a
                     >
                     <a
-                        href="#"
+                        href="https://github.com/Vanilla-OS/apx/releases/latest"
                         class="bg-green-400 text-black px-4 py-2 rounded-full text-base hover:bg-green-500 transition duration-200"
                         >Download</a
                     >

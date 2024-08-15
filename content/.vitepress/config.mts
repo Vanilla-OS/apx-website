@@ -6,6 +6,24 @@ export default defineConfig({
   description: "The docs for Apx",
   lang: "en",
 
+  themeConfig: {
+    nav: {
+      version: 'v2.4.3',
+      links: {
+        first: [
+          { text: 'Getting Started', url: '/' },
+          { text: 'Documentation', url: 'https://docs.vanillaos.org/docs/en/apx-manpage' },
+          { text: 'Support', url: '/support' },
+        ],
+        second: [
+          { text: 'Subsystems', url: '/subsystems' },
+          { text: 'Stacks', url: '/stacks' },
+          { text: 'Package Managers', url: '/packages' },
+        ],
+      },
+    }
+  },
+
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'author', content: 'Vanilla OS Contributors' }],
