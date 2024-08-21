@@ -4,11 +4,7 @@
             class="flex flex-row items-center justify-between px-4 sm:px-16 py-5 border-b border-white border-opacity-20"
         >
             <a href="/">
-                <img
-                    src="/assets/logo.svg"
-                    alt="Apx"
-                    class="h-8"
-                />
+                <img src="/assets/logo.svg" alt="Apx" class="h-8" />
             </a>
             <div
                 class="flex flex-row items-center gap-4 sm:gap-8 font-light text-base opacity-80"
@@ -79,6 +75,7 @@
                             v-for="link in theme.nav.links.first"
                             :key="link"
                             :href="link.url"
+                            @click="toggleMenu"
                             class="text-white"
                             >{{ link.text }}</a
                         >
@@ -92,6 +89,7 @@
                                 v-for="link in theme.nav.links.second"
                                 :key="link"
                                 :href="link.url"
+                                @click="toggleMenu"
                                 class="text-white"
                                 >{{ link.text }}</a
                             >
