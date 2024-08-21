@@ -114,7 +114,7 @@
                 </p>
                 <p class="text-white text-opacity-40">
                     Sponsored by
-                    <span class="text-green-500">fabricators.ltd</span>
+                    <a href="https://fabricators.ltd" class="text-green-500">fabricators.ltd</a>
                 </p>
             </div>
         </div>
