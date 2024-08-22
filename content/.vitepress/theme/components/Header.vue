@@ -66,6 +66,9 @@
                 class="fixed inset-0 bg-black bg-opacity-20 backdrop-blur-md z-50 flex items-center justify-center"
                 @click="toggleMenu"
             >
+            <button class="absolute top-7 right-7 text-gray-300 mix-blend-difference">
+                <span class="material-symbols-outlined">close</span>
+            </button>
                 <div
                     class="bg-[#101010] p-6 rounded-lg w-11/12 max-w-md"
                     @click.stop
