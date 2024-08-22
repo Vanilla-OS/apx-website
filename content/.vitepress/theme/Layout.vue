@@ -11,17 +11,17 @@ const { frontmatter, page } = useData();
 </script>
 
 <template>
-    <Header />
+  <Header />
+  <div v-if="frontmatter.home">
+    <Hero />
+  </div>
+  <div class="mx-auto max-w-6xl px-4 pt-20 sm:px-6 lg:px-8">
     <div v-if="frontmatter.home">
-        <Hero />
+      <Home />
     </div>
-    <div class="mx-auto max-w-6xl px-4 pt-20 sm:px-6 lg:px-8">
-        <div v-if="frontmatter.home">
-            <Home />
-        </div>
-        <div v-if="page.isNotFound">
-            <NotFound />
-        </div>
+    <div v-if="page.isNotFound">
+      <NotFound />
     </div>
-    <Footer />
+  </div>
+  <Footer />
 </template>
