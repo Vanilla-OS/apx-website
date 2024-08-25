@@ -9,11 +9,80 @@
         <p class="text-[#727976] text-center sm:text-left">
           Apx is made possible thanks to the following projects.
         </p>
-        <img
-          src="/assets/components/footer/projects.svg"
-          alt="Projects"
-          class="mt-4 sm:mt-0"
-        />
+        <div
+          class="mt-4 sm:mt-0 flex flex-wrap gap-6 items-center justify-center"
+        >
+          <a
+            href="https://go.dev"
+            target="_blank"
+            class="flex justify-center items-center"
+          >
+            <img
+              src="/assets/components/footer/icons/go.svg"
+              alt="Go"
+              class="h-6 hover:scale-110 transition-all duration-300 ease-in-out"
+              style="filter: none"
+              onmouseover="this.style.filter = 'saturate(100%) invert(41%) sepia(56%) saturate(472%) hue-rotate(143deg) brightness(96%) contrast(88%)'"
+              onmouseout="this.style.filter = 'none'"
+            />
+          </a>
+          <a
+            href="https://vanillaos.org"
+            target="_blank"
+            class="flex justify-center items-center"
+          >
+            <img
+              src="/assets/components/footer/icons/vanillaos.svg"
+              alt="Vanilla OS"
+              class="w-8 hover:scale-110 transition-all duration-300 ease-in-out"
+              style="filter: none"
+              onmouseover="this.style.filter = 'saturate(100%) invert(85%) sepia(100%) saturate(300%) hue-rotate(1deg) brightness(100%) contrast(90%)';"
+              onmouseout="this.style.filter = 'none';"
+            />
+          </a>
+          <a
+            href="https://github.com"
+            target="_blank"
+            class="flex justify-center items-center"
+          >
+            <img
+              src="/assets/components/footer/icons/github.svg"
+              alt="GitHub"
+              class="w-8 hover:scale-110 transition-all duration-300 ease-in-out"
+              style="filter: none"
+              onmouseover="this.style.filter = 'invert(100%) brightness(100%) saturate(100%)'"
+              onmouseout="this.style.filter = 'none';"
+            />
+          </a>
+          <a
+            href="https://docker.com"
+            target="_blank"
+            class="flex justify-center items-center"
+          >
+            <img
+              src="/assets/components/footer/icons/docker.svg"
+              alt="Docker"
+              class="w-8 hover:scale-110 transition-all duration-300 ease-in-out"
+              style="filter: none"
+              onmouseover="this.style.filter = 'brightness(100%) saturate(100%) invert(100%) sepia(100%) saturate(472%) hue-rotate(143deg) brightness(100%) contrast(100%)'"
+              onmouseout="this.style.filter = 'none'"
+            />
+          </a>
+          <a
+            href="https://distrobox.it"
+            target="_blank"
+            class="flex justify-center items-center"
+          >
+            <img
+              src="/assets/components/footer/icons/distrobox.svg"
+              alt="Distrobox"
+              class="w-8 hover:scale-110 transition-all duration-300 ease-in-out"
+              style="filter: none"
+              onmouseover="this.style.filter = 'saturate(100%) invert(39%) sepia(49%) saturate(749%) hue-rotate(5deg) brightness(100%) contrast(93%)';"
+              onmouseout="this.style.filter = 'none';"
+            />
+          </a>
+        </div>
       </div>
       <div class="flex flex-col lg:flex-row gap-10 lg:gap-48">
         <div class="flex flex-col gap-2">
