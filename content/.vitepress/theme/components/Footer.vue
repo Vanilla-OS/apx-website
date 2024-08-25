@@ -89,17 +89,25 @@
           <h3 class="text-white text-opacity-70 text-base font-semibold">
             Help
           </h3>
-          <a href="/docs" class="text-white text-opacity-40">Documentation</a>
-          <a href="/getting-started" class="text-white text-opacity-40"
+          <a href="/docs" class="text-white text-opacity-40 hover:underline"
+            >Documentation</a
+          >
+          <a
+            href="/getting-started"
+            class="text-white text-opacity-40 hover:underline"
             >Getting Started</a
           >
-          <a href="/package" class="text-white text-opacity-40"
+          <a href="/package" class="text-white text-opacity-40 hover:underline"
             >Package for Your Distribution</a
           >
-          <a href="/share/stacks" class="text-white text-opacity-40"
+          <a
+            href="/share/stacks"
+            class="text-white text-opacity-40 hover:underline"
             >Sharing Stacks</a
           >
-          <a href="/create/stacks" class="text-white text-opacity-40"
+          <a
+            href="/create/stacks"
+            class="text-white text-opacity-40 hover:underline"
             >Creating Stacks</a
           >
         </div>
@@ -108,8 +116,12 @@
             <h3 class="text-white text-opacity-70 text-base font-semibold">
               Developers
             </h3>
-            <a href="/docs" class="text-white text-opacity-40">Source Code</a>
-            <a href="/getting-started" class="text-white text-opacity-40"
+            <a href="/docs" class="text-white text-opacity-40 hover:underline"
+              >Source Code</a
+            >
+            <a
+              href="/getting-started"
+              class="text-white text-opacity-40 hover:underline"
               >Report a bug</a
             >
           </div>
@@ -117,8 +129,14 @@
             <h3 class="text-white text-opacity-70 text-base font-semibold">
               Get Apx
             </h3>
-            <a href="/download" class="text-white text-opacity-40">Download</a>
-            <a href="https://github.com/" class="text-white text-opacity-40"
+            <a
+              href="/download"
+              class="text-white text-opacity-40 hover:underline"
+              >Download</a
+            >
+            <a
+              href="https://github.com/"
+              class="text-white text-opacity-40 hover:underline"
               >Build From Source</a
             >
           </div>
@@ -127,11 +145,15 @@
           <h3 class="text-white text-opacity-70 text-base font-semibold">
             Community
           </h3>
-          <a href="/docs" class="text-white text-opacity-40">GitHub</a>
-          <a href="/getting-started" class="text-white text-opacity-40"
+          <a href="/docs" class="text-white text-opacity-40 hover:underline"
+            >GitHub</a
+          >
+          <a
+            href="/getting-started"
+            class="text-white text-opacity-40 hover:underline"
             >Discord Community</a
           >
-          <a href="/package" class="text-white text-opacity-40"
+          <a href="/package" class="text-white text-opacity-40 hover:underline"
             >Community Stacks</a
           >
         </div>
@@ -157,7 +179,9 @@
         </p>
         <p class="text-white text-opacity-40">
           Sponsored by
-          <a href="https://fabricators.ltd" class="text-green-500"
+          <a
+            href="https://fabricators.ltd"
+            class="text-green-500 hover:underline"
             >fabricators.ltd</a
           >
         </p>
