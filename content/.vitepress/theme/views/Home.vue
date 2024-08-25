@@ -5,7 +5,7 @@
       class="flex flex-col gap-8 text-center justify-center items-center"
     >
       <img
-        src="/assets/components/ellipse-3.png"
+        src="/assets/components/decorations/ellipse-3.png"
         alt="Blurry Circle"
         class="absolute left-0 w-[20rem] lg:w-[40rem] select-none"
       />
@@ -52,7 +52,7 @@
         />
       </picture>
       <img
-        src="/assets/components/ellipse-1.png"
+        src="/assets/components/decorations/ellipse-1.png"
         alt="Blurry Circle"
         class="absolute left-0 w-[20rem] lg:w-[40rem] select-none"
       />
@@ -92,7 +92,7 @@
       class="flex flex-row flex-wrap gap-12 justify-center items-center"
     >
       <img
-        src="/assets/components/ellipse-2.png"
+        src="/assets/components/decorations/ellipse-2.png"
         alt="Blurry Circle"
         class="absolute left-0 w-[20rem] lg:w-[40rem] select-none mb-[20rem]"
       />
@@ -145,7 +145,7 @@
         </p>
       </div>
       <img
-        src="/assets/components/ellipse-3.png"
+        src="/assets/components/decorations/ellipse-3.png"
         alt="Blurry Circle"
         class="absolute left-0 w-[20rem] lg:w-[40rem] select-none"
       />
@@ -158,7 +158,7 @@
           rel="noopener noreferrer"
         >
           <img
-            src="/assets/components/rocky.svg"
+            src="/assets/components/distributions/rocky.svg"
             alt="Rocky Linux"
             class="w-16 lg:w-[10rem] hover:scale-110 transition-all duration-300 ease-in-out"
             style="filter: drop-shadow(0 0 0px transparent)"
@@ -172,7 +172,7 @@
           rel="noopener noreferrer"
         >
           <img
-            src="/assets/components/fedora.svg"
+            src="/assets/components/distributions/fedora.svg"
             alt="Fedora"
             class="w-16 lg:w-[10rem] hover:scale-110 transition-all duration-300 ease-in-out"
             style="filter: drop-shadow(0 0 0px transparent)"
@@ -186,7 +186,7 @@
           rel="noopener noreferrer"
         >
           <img
-            src="/assets/components/vanilla.svg"
+            src="/assets/components/distributions/vanilla.svg"
             alt="Vanilla OS"
             class="w-16 lg:w-[10rem] hover:scale-110 all duration-300 ease-in-out"
             style="filter: drop-shadow(0 0 0px transparent)"
@@ -196,7 +196,7 @@
         </a>
         <a href="https://ubuntu.com/" target="_blank" rel="noopener noreferrer">
           <img
-            src="/assets/components/ubuntu.svg"
+            src="/assets/components/distributions/ubuntu.svg"
             alt="Ubuntu"
             class="w-16 lg:w-[10rem] hover:scale-110 all duration-300 ease-in-out"
             style="filter: drop-shadow(0 0 0px transparent)"
@@ -210,7 +210,7 @@
           rel="noopener noreferrer"
         >
           <img
-            src="/assets/components/arch.svg"
+            src="/assets/components/distributions/arch.svg"
             alt="Arch Linux"
             class="w-16 lg:w-[10rem] hover:scale-110 all duration-300 ease-in-out"
             style="filter: drop-shadow(0 0 0px transparent)"
