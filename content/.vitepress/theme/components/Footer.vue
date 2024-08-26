@@ -116,7 +116,9 @@
             <h3 class="text-white text-opacity-70 text-base font-semibold">
               Developers
             </h3>
-            <a href="https://github.com/Vanilla-OS/apx" class="text-white text-opacity-40 hover:underline"
+            <a
+              href="https://github.com/Vanilla-OS/apx"
+              class="text-white text-opacity-40 hover:underline"
               >Source Code</a
             >
             <a
@@ -145,7 +147,9 @@
           <h3 class="text-white text-opacity-70 text-base font-semibold">
             Community
           </h3>
-          <a href="https://github.com/" class="text-white text-opacity-40 hover:underline"
+          <a
+            href="https://github.com/"
+            class="text-white text-opacity-40 hover:underline"
             >GitHub</a
           >
           <a
