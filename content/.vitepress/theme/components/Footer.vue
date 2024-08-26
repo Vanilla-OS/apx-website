@@ -116,11 +116,11 @@
             <h3 class="text-white text-opacity-70 text-base font-semibold">
               Developers
             </h3>
-            <a href="/docs" class="text-white text-opacity-40 hover:underline"
+            <a href="https://github.com/Vanilla-OS/apx" class="text-white text-opacity-40 hover:underline"
               >Source Code</a
             >
             <a
-              href="/getting-started"
+              href="https://github.com/Vanilla-OS/apx/issues"
               class="text-white text-opacity-40 hover:underline"
               >Report a bug</a
             >
@@ -135,7 +135,7 @@
               >Download</a
             >
             <a
-              href="https://github.com/"
+              href="https://github.com/Vanilla-OS/apx"
               class="text-white text-opacity-40 hover:underline"
               >Build From Source</a
             >
@@ -145,11 +145,11 @@
           <h3 class="text-white text-opacity-70 text-base font-semibold">
             Community
           </h3>
-          <a href="/docs" class="text-white text-opacity-40 hover:underline"
+          <a href="https://github.com/" class="text-white text-opacity-40 hover:underline"
             >GitHub</a
           >
           <a
-            href="/getting-started"
+            href="https://vanillaos.org/community"
             class="text-white text-opacity-40 hover:underline"
             >Discord Community</a
           >
