@@ -22,7 +22,7 @@
               alt="Go"
               class="h-6 hover:scale-110 transition-all duration-300 ease-in-out"
               style="filter: none"
-              onmouseover="this.style.filter = 'saturate(100%) invert(41%) sepia(56%) saturate(472%) hue-rotate(143deg) brightness(96%) contrast(88%)'"
+              onmouseover="this.style.filter = 'saturate(100%) invert(41%) sepia(56%) saturate(472%) hue-rotate(143deg) brightness(120%) contrast(88%)'"
               onmouseout="this.style.filter = 'none'"
             />
           </a>
@@ -50,7 +50,7 @@
               alt="GitHub"
               class="w-8 hover:scale-110 transition-all duration-300 ease-in-out"
               style="filter: none"
-              onmouseover="this.style.filter = 'invert(100%) brightness(100%) saturate(100%)'"
+              onmouseover="this.style.filter = 'invert(100%) brightness(1000%)'"
               onmouseout="this.style.filter = 'none';"
             />
           </a>
@@ -63,8 +63,8 @@
               src="/assets/components/footer/icons/docker.svg"
               alt="Docker"
               class="w-8 hover:scale-110 transition-all duration-300 ease-in-out"
-              style="filter: none"
-              onmouseover="this.style.filter = 'brightness(100%) saturate(100%) invert(100%) sepia(100%) saturate(472%) hue-rotate(143deg) brightness(100%) contrast(100%)'"
+              style="filter: none; transition: filter 0.3s ease-in-out"
+              onmouseover="this.style.filter = 'brightness(0) saturate(100%) invert(32%) sepia(100%) saturate(1000%) hue-rotate(200deg) brightness(90%) contrast(100%)'"
               onmouseout="this.style.filter = 'none'"
             />
           </a>
@@ -78,8 +78,8 @@
               alt="Distrobox"
               class="w-8 hover:scale-110 transition-all duration-300 ease-in-out"
               style="filter: none"
-              onmouseover="this.style.filter = 'saturate(100%) invert(39%) sepia(49%) saturate(749%) hue-rotate(5deg) brightness(100%) contrast(93%)';"
-              onmouseout="this.style.filter = 'none';"
+              onmouseover="this.style.filter = 'saturate(100%) invert(39%) sepia(49%) saturate(109%) hue-rotate(5deg) brightness(150%) contrast(93%)';"
+              onmouseout="this.style.filter = 'none'"
             />
           </a>
         </div>
