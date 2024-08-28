@@ -20,7 +20,7 @@
           v-for="link in theme.nav.links.first"
           :key="link"
           :href="link.url"
-          class="text-white hidden lg:inline-flex"
+          class="text-white hidden lg:inline-flex hover:text-opacity-80 transition-colors duration-20"
           >{{ link.text }}</a
         >
       </div>
@@ -39,7 +39,7 @@
             v-for="link in theme.nav.links.second"
             :key="link"
             :href="link.url"
-            class="text-white"
+            class="text-white hover:text-opacity-80 transition-colors duration-20"
             >{{ link.text }}</a
           >
         </div>
