@@ -23,7 +23,7 @@
         href="#what-is"
         class="mb-10 animate-bounce text-white text-opacity-40 z-10"
       >
-        <span class="material-symbols-outlined text-4xl">
+        <span class="material-symbols-outlined text-4xl hover:text-white transition duration-200">
           keyboard_arrow_down
         </span>
       </a>
