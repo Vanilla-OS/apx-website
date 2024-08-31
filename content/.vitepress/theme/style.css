@@ -9,9 +9,9 @@ html {
 }
 
 body {
-  @apply bg-white dark:bg-[#1C1C1C] text-black dark:text-white;
+  @apply bg-white text-black dark:bg-[#1C1C1C] dark:text-white;
 }
 
 .material-symbols-outlined {
-  @apply inline-block align-middle select-none;
+  @apply inline-block select-none align-middle;
 }

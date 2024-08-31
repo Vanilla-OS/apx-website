@@ -1,26 +1,26 @@
 <template>
-  <footer class="bg-[#101010] text-white py-10">
+  <footer class="bg-[#101010] py-10 text-white">
     <div
-      class="flex flex-col gap-8 justify-center items-center px-4 sm:px-10 lg:px-20"
+      class="flex flex-col items-center justify-center gap-8 px-4 sm:px-10 lg:px-20"
     >
       <div
-        class="flex flex-col sm:flex-row flex-wrap gap-6 justify-center items-center pb-10 sm:px-10 border-b border-[#333836]"
+        class="flex flex-col flex-wrap items-center justify-center gap-6 border-b border-[#333836] pb-10 sm:flex-row sm:px-10"
       >
-        <p class="text-[#727976] text-center sm:text-left">
+        <p class="text-center text-[#727976] sm:text-left">
           Apx is made possible thanks to the following projects.
         </p>
         <div
-          class="mt-4 sm:mt-0 flex flex-wrap gap-6 items-center justify-center"
+          class="mt-4 flex flex-wrap items-center justify-center gap-6 sm:mt-0"
         >
           <a
             href="https://go.dev"
             target="_blank"
-            class="flex justify-center items-center"
+            class="flex items-center justify-center"
           >
             <img
               src="/assets/components/footer/icons/go.svg"
               alt="Go"
-              class="h-6 hover:scale-110 transition-all duration-300 ease-in-out"
+              class="h-6 transition-all duration-300 ease-in-out hover:scale-110"
               style="filter: none"
               onmouseover="this.style.filter = 'saturate(100%) invert(41%) sepia(56%) saturate(472%) hue-rotate(143deg) brightness(120%) contrast(88%)'"
               onmouseout="this.style.filter = 'none'"
@@ -29,12 +29,12 @@
           <a
             href="https://vanillaos.org"
             target="_blank"
-            class="flex justify-center items-center"
+            class="flex items-center justify-center"
           >
             <img
               src="/assets/components/footer/icons/vanillaos.svg"
               alt="Vanilla OS"
-              class="w-8 hover:scale-110 transition-all duration-300 ease-in-out"
+              class="w-8 transition-all duration-300 ease-in-out hover:scale-110"
               style="filter: none"
               onmouseover="this.style.filter = 'saturate(100%) invert(85%) sepia(100%) saturate(300%) hue-rotate(1deg) brightness(100%) contrast(90%)';"
               onmouseout="this.style.filter = 'none';"
@@ -43,12 +43,12 @@
           <a
             href="https://github.com"
             target="_blank"
-            class="flex justify-center items-center"
+            class="flex items-center justify-center"
           >
             <img
               src="/assets/components/footer/icons/github.svg"
               alt="GitHub"
-              class="w-8 hover:scale-110 transition-all duration-300 ease-in-out"
+              class="w-8 transition-all duration-300 ease-in-out hover:scale-110"
               style="filter: none"
               onmouseover="this.style.filter = 'invert(100%) brightness(1000%)'"
               onmouseout="this.style.filter = 'none';"
@@ -57,12 +57,12 @@
           <a
             href="https://docker.com"
             target="_blank"
-            class="flex justify-center items-center"
+            class="flex items-center justify-center"
           >
             <img
               src="/assets/components/footer/icons/docker.svg"
               alt="Docker"
-              class="w-8 hover:scale-110 transition-all duration-300 ease-in-out"
+              class="w-8 transition-all duration-300 ease-in-out hover:scale-110"
               style="filter: none; transition: filter 0.3s ease-in-out"
               onmouseover="this.style.filter = 'brightness(0) saturate(100%) invert(32%) sepia(100%) saturate(1000%) hue-rotate(200deg) brightness(90%) contrast(100%)'"
               onmouseout="this.style.filter = 'none'"
@@ -71,12 +71,12 @@
           <a
             href="https://distrobox.it"
             target="_blank"
-            class="flex justify-center items-center"
+            class="flex items-center justify-center"
           >
             <img
               src="/assets/components/footer/icons/distrobox.svg"
               alt="Distrobox"
-              class="w-8 hover:scale-110 transition-all duration-300 ease-in-out"
+              class="w-8 transition-all duration-300 ease-in-out hover:scale-110"
               style="filter: none"
               onmouseover="this.style.filter = 'saturate(100%) invert(39%) sepia(49%) saturate(109%) hue-rotate(5deg) brightness(150%) contrast(93%)';"
               onmouseout="this.style.filter = 'none'"
@@ -84,9 +84,9 @@
           </a>
         </div>
       </div>
-      <div class="flex flex-col lg:flex-row gap-10 lg:gap-48">
+      <div class="flex flex-col gap-10 lg:flex-row lg:gap-48">
         <div class="flex flex-col gap-2">
-          <h3 class="text-white text-opacity-70 text-base font-semibold">
+          <h3 class="text-base font-semibold text-white text-opacity-70">
             Help
           </h3>
           <a href="/docs" class="text-white text-opacity-40 hover:underline"
@@ -113,7 +113,7 @@
         </div>
         <div class="flex flex-col gap-5">
           <div class="flex flex-col gap-2">
-            <h3 class="text-white text-opacity-70 text-base font-semibold">
+            <h3 class="text-base font-semibold text-white text-opacity-70">
               Developers
             </h3>
             <a
@@ -128,7 +128,7 @@
             >
           </div>
           <div class="flex flex-col gap-2">
-            <h3 class="text-white text-opacity-70 text-base font-semibold">
+            <h3 class="text-base font-semibold text-white text-opacity-70">
               Get Apx
             </h3>
             <a
@@ -144,7 +144,7 @@
           </div>
         </div>
         <div class="flex flex-col gap-2">
-          <h3 class="text-white text-opacity-70 text-base font-semibold">
+          <h3 class="text-base font-semibold text-white text-opacity-70">
             Community
           </h3>
           <a
@@ -164,9 +164,9 @@
       </div>
     </div>
     <div
-      class="flex flex-col sm:flex-row flex-wrap justify-between items-center pt-10 px-4 sm:px-10 lg:px-20 gap-6 sm:gap-0"
+      class="flex flex-col flex-wrap items-center justify-between gap-6 px-4 pt-10 sm:flex-row sm:gap-0 sm:px-10 lg:px-20"
     >
-      <div class="flex flex-col sm:flex-row flex-wrap gap-5 items-center">
+      <div class="flex flex-col flex-wrap items-center gap-5 sm:flex-row">
         <img src="/assets/components/footer/logo.svg" alt="Logo" />
         <div class="flex flex-col gap-2 text-center sm:text-left">
           <p class="text-white text-opacity-40">
