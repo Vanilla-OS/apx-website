@@ -15,8 +15,8 @@
         </h1>
         <a
           href="#"
-          class="rounded-full bg-white px-8 py-3 text-base font-semibold text-black transition duration-200 hover:bg-green-500 lg:text-lg"
-          >Get Started</a
+          class="rounded-full bg-white px-7 py-2 text-base font-medium text-black transition duration-200 hover:bg-green-500 lg:text-lg"
+          >Getting Started</a
         >
       </div>
       <a
