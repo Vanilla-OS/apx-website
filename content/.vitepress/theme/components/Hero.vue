@@ -30,6 +30,5 @@
         </span>
       </a>
     </div>
-    <div class="absolute inset-0 z-0 bg-black opacity-40"></div>
   </div>
 </template>
