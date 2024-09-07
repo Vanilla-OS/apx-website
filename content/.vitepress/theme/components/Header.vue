@@ -53,7 +53,7 @@
           >
           <a
             href="https://github.com/Vanilla-OS/apx/releases/latest"
-            class="rounded-full bg-green-400 px-4 py-2 text-base text-black transition duration-200 hover:bg-green-500"
+            class="rounded-full bg-[#24FF93] px-4 py-2 text-base font-medium text-black transition duration-200 hover:bg-green-500"
             >Download</a
           >
         </div>
