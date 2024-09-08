@@ -48,12 +48,12 @@
         >
           <a
             href="https://github.com/Vanilla-OS/apx"
-            class="rounded-full border border-white px-4 py-2 text-base text-white transition duration-200 hover:bg-white hover:text-black"
+            class="rounded-full border border-white px-5 py-2 text-base text-white transition duration-200 hover:bg-white hover:text-black"
             >Source Code</a
           >
           <a
             href="https://github.com/Vanilla-OS/apx/releases/latest"
-            class="rounded-full bg-[#24FF93] px-4 py-2 text-base font-medium text-black transition duration-200 hover:bg-green-500"
+            class="rounded-full bg-[#24FF93] px-5 py-2 text-base font-medium text-black transition duration-200 hover:bg-green-500"
             >Download</a
           >
         </div>
