@@ -13,7 +13,7 @@
     </div>
     <a
       href="/"
-      class="mt-6 rounded-full bg-green-500 px-4 py-2 font-bold text-black transition-colors hover:bg-green-600 sm:w-[50%] md:w-[30%] lg:w-[20%]"
+      class="mt-6 rounded-full bg-green-500 px-4 py-2 font-bold text-black transition-colors hover:bg-green-600 sm:w-[50%] md:w-[30%] lg:w-[20%] animate-pulse"
       >Take me home</a
     >
   </div>
