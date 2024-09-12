@@ -148,7 +148,7 @@
             Community
           </h3>
           <a
-            href="https://github.com/"
+            href="https://github.com/orgs/Vanilla-OS/discussions"
             class="text-white text-opacity-40 hover:underline"
             >GitHub</a
           >
