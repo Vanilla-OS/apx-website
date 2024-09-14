@@ -26,7 +26,7 @@
           srcset="/assets/components/what-is.svg"
         />
         <img
-          alt="What is Apx?"
+          alt="A diagram showing how Apx works"
           src="/assets/components/what-is.svg"
           class="lg:w-[50rem]"
         />
@@ -47,13 +47,13 @@
         />
         <img
           src="/assets/components/subsystems.svg"
-          alt="Subsystems"
+          alt="A diagram showing how Apx subsystems work"
           class="w-[10rem] lg:w-[25rem]"
         />
       </picture>
       <img
         src="/assets/components/decorations/ellipse-1.png"
-        alt="Blurry Circle"
+        alt="Blurry Circle, decorative element"
         class="absolute left-0 w-[20rem] select-none lg:w-[40rem]"
       />
       <div class="flex flex-col gap-4 text-center lg:text-left">
@@ -80,7 +80,7 @@
           media="(prefers-color-scheme: light)"
           srcset="/assets/components/vscode.svg"
         />
-        <img src="/assets/components/vscode.svg" alt="VSCode" />
+        <img src="/assets/components/vscode.svg" alt="An illustration of VSCode, which inside the window it has a demo Go code" />
       </picture>
       <p class="text-xl lg:w-[35rem] lg:text-2xl">
         Apx integrates them with your system, providing that native feedback
@@ -93,7 +93,7 @@
     >
       <img
         src="/assets/components/decorations/ellipse-2.png"
-        alt="Blurry Circle"
+        alt="Blurry Circle, decorative element"
         class="absolute left-0 mb-[20rem] w-[20rem] select-none lg:w-[40rem]"
       />
       <picture>
@@ -107,7 +107,7 @@
         />
         <img
           src="/assets/components/stack.png"
-          alt="Stack"
+          alt="A diagram with a few icons of different technologies, like VSCode, Python, Go, and React, all being stacks"
           class="w-[10rem] lg:w-[25rem]"
         />
       </picture>
@@ -146,7 +146,7 @@
       </div>
       <img
         src="/assets/components/decorations/ellipse-3.png"
-        alt="Blurry Circle"
+        alt="Blurry Circle, decorative element"
         class="absolute left-0 w-[20rem] select-none lg:w-[40rem]"
       />
       <div
