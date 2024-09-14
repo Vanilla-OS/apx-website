@@ -80,7 +80,10 @@
           media="(prefers-color-scheme: light)"
           srcset="/assets/components/vscode.svg"
         />
-        <img src="/assets/components/vscode.svg" alt="An illustration of VSCode, which inside the window it has a demo Go code" />
+        <img
+          src="/assets/components/vscode.svg"
+          alt="An illustration of VSCode, which inside the window it has a demo Go code"
+        />
       </picture>
       <p class="text-xl lg:w-[35rem] lg:text-2xl">
         Apx integrates them with your system, providing that native feedback
