@@ -7,7 +7,7 @@
     <hr
       class="mx-auto my-5 w-56 rounded-full border border-black border-opacity-45 dark:border-white dark:border-opacity-20"
     />
-    <div class="mt-4 opacity-60">
+    <div class="flex flex-col gap-1 opacity-60">
       <p>The page you are looking for does not exist.</p>
       <p>Maybe it was on the previous root?</p>
     </div>
