@@ -1,5 +1,11 @@
 <template>
-  <nav class="flex w-full flex-col gap-0 bg-[#101010]">
+  <a
+    href="#main"
+    aria-label="Skip to main content"
+    class="absolute left-0 top-[-100] z-50 bg-black bg-opacity-50 p-4 text-white"
+    >Skip to main content</a
+  >
+  <nav>
     <div
       class="flex flex-row items-center justify-between border-b border-white border-opacity-20 px-4 py-5 sm:px-16"
     >

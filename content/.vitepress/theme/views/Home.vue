@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-10 flex flex-col gap-32 pb-44">
+  <div class="mb-10 flex flex-col gap-32 pb-44" id="main">
     <section
       id="what-is"
       class="flex flex-col items-center justify-center gap-8 text-center"
