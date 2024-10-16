@@ -1,13 +1,10 @@
 <template>
-<a
-  href="#main"
-  aria-label="Skip to main content"
-  class="skip-to-content"
-  >Skip to main content</a
->
+  <a href="#main" aria-label="Skip to main content" class="skip-to-content"
+    >Skip to main content</a
+  >
   <nav>
     <div
-      class="flex flex-row items-center justify-between border-b border-white border-opacity-20 px-4 py-5 sm:px-16 text-black bg-[#101010]"
+      class="flex flex-row items-center justify-between border-b border-white border-opacity-20 bg-[#101010] px-4 py-5 text-black sm:px-16"
     >
       <a href="/">
         <img src="/assets/logo.svg" alt="Apx" class="h-8" />
@@ -32,7 +29,7 @@
       </div>
     </div>
     <div
-      class="hidden flex-col items-center justify-between px-4 py-2 sm:flex-row sm:px-16 lg:flex bg-[#101010]"
+      class="hidden flex-col items-center justify-between bg-[#101010] px-4 py-2 sm:flex-row sm:px-16 lg:flex"
     >
       <p class="mb-4 font-normal text-white opacity-40 sm:mb-0">
         {{ theme.nav.version }}
