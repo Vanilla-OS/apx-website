@@ -15,3 +15,28 @@ body {
 .material-symbols-outlined {
   @apply inline-block select-none align-middle;
 }
+
+.skip-to-content {
+  clip: rect(1px, 1px, 1px, 1px);
+  word-wrap: normal;
+  -webkit-clip-path: inset(50%);
+  position: absolute;
+  z-index: 999;
+  clip-path: inset(50%);
+  margin: -1px;
+  border: 0;
+  overflow: hidden;
+  @apply bg-black bg-opacity-50 p-4 text-white;
+}
+
+.skip-to-content:focus {
+  clip: auto !important;
+  -webkit-clip-path: none;
+  top: 0;
+  left: 0;
+  clip-path: none;
+  margin: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
