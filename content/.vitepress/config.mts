@@ -11,17 +11,17 @@ export default defineConfig({
       version: "v2.4.3",
       links: {
         first: [
-          { text: "Getting Started", url: "/" },
+          { text: "Getting Started", url: "https://docs.vanillaos.org/apx/en/getting-started" },
           {
             text: "Documentation",
-            url: "https://docs.vanillaos.org/docs/en/apx-manpage",
+            url: "https://docs.vanillaos.org/collections/apx",
           },
-          { text: "Support", url: "/support" },
+          { text: "Support", url: "https://github.com/Vanilla-OS/apx" },
         ],
         second: [
-          { text: "Subsystems", url: "/subsystems" },
-          { text: "Stacks", url: "/stacks" },
-          { text: "Package Managers", url: "/packages" },
+          { text: "Subsystems", url: "https://docs.vanillaos.org/apx/en/working-w-subsystems" },
+          { text: "Stacks", url: "https://docs.vanillaos.org/apx/en/working-w-stacks" },
+          { text: "Package Managers", url: "https://docs.vanillaos.org/apx/en/understanding-pmss" },
         ],
       },
     },

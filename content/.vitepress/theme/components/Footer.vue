@@ -89,15 +89,15 @@
           <h3 class="text-base font-semibold text-white text-opacity-70">
             Help
           </h3>
-          <a href="/docs" class="text-white text-opacity-40 hover:underline"
+          <a href="https://docs.vanillaos.org/collections/apx" class="text-white text-opacity-40 hover:underline"
             >Documentation</a
           >
           <a
-            href="/getting-started"
+            href="https://docs.vanillaos.org/apx/en/getting-started"
             class="text-white text-opacity-40 hover:underline"
             >Getting Started</a
           >
-          <a href="/package" class="text-white text-opacity-40 hover:underline"
+          <a href="https://github.com/Vanilla-OS/apx?tab=readme-ov-file#community-packages" class="text-white text-opacity-40 hover:underline"
             >Package for Your Distribution</a
           >
           <a
@@ -106,7 +106,7 @@
             >Sharing Stacks</a
           >
           <a
-            href="/create/stacks"
+            href="https://docs.vaillaos.org/apx/en/working-w-stacks"
             class="text-white text-opacity-40 hover:underline"
             >Creating Stacks</a
           >
@@ -132,7 +132,7 @@
               Get Apx
             </h3>
             <a
-              href="/download"
+              href="https://github.com/Vanilla-OS/apx/releases/latest"
               class="text-white text-opacity-40 hover:underline"
               >Download</a
             >

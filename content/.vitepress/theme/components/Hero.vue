@@ -14,7 +14,7 @@
           the way you like. Everywhere.
         </h1>
         <a
-          href="#"
+          href="https://docs.vanillaos.org/apx/en/getting-started"
           class="rounded-full bg-white px-7 py-2 text-base font-medium text-black transition duration-200 hover:bg-green-500 lg:text-lg"
           >Getting Started</a
         >
