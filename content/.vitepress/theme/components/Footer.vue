@@ -89,7 +89,9 @@
           <h3 class="text-base font-semibold text-white text-opacity-70">
             Help
           </h3>
-          <a href="https://docs.vanillaos.org/collections/apx" class="text-white text-opacity-40 hover:underline"
+          <a
+            href="https://docs.vanillaos.org/collections/apx"
+            class="text-white text-opacity-40 hover:underline"
             >Documentation</a
           >
           <a
@@ -97,7 +99,9 @@
             class="text-white text-opacity-40 hover:underline"
             >Getting Started</a
           >
-          <a href="https://github.com/Vanilla-OS/apx?tab=readme-ov-file#community-packages" class="text-white text-opacity-40 hover:underline"
+          <a
+            href="https://github.com/Vanilla-OS/apx?tab=readme-ov-file#community-packages"
+            class="text-white text-opacity-40 hover:underline"
             >Package for Your Distribution</a
           >
           <a
