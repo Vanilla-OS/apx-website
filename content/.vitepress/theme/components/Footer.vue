@@ -110,7 +110,7 @@
             >Sharing Stacks (Coming Soon)</a
           >
           <a
-            href="https://docs.vaillaos.org/apx/en/working-w-stacks"
+            href="https://docs.vanillaos.org/apx/en/working-w-stacks"
             class="text-white text-opacity-40 hover:underline"
             >Creating Stacks</a
           >
