@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  @apply bg-white text-black dark:bg-[#1C1C1C] dark:text-white;
+  @apply bg-white text-black dark:bg-[#1C1C1C] dark:text-white overflow-x-hidden;
 }
 
 .material-symbols-outlined {
