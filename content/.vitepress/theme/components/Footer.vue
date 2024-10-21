@@ -106,7 +106,7 @@
           >
           <a
             href="#"
-            class="text-white text-opacity-40 hover:underline pointer-events-none"
+            class="pointer-events-none text-white text-opacity-40 hover:underline"
             >Sharing Stacks (Coming Soon)</a
           >
           <a
@@ -161,7 +161,9 @@
             class="text-white text-opacity-40 hover:underline"
             >Discord Community</a
           >
-          <a href="#" class="text-white text-opacity-40 hover:underline pointer-events-none"
+          <a
+            href="#"
+            class="pointer-events-none text-white text-opacity-40 hover:underline"
             >Community Stacks (Coming Soon)</a
           >
         </div>
