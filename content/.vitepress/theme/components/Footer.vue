@@ -105,9 +105,9 @@
             >Package for Your Distribution</a
           >
           <a
-            href="/share/stacks"
-            class="text-white text-opacity-40 hover:underline"
-            >Sharing Stacks</a
+            href="#"
+            class="text-white text-opacity-40 hover:underline pointer-events-none"
+            >Sharing Stacks (Coming Soon)</a
           >
           <a
             href="https://docs.vaillaos.org/apx/en/working-w-stacks"
@@ -161,8 +161,8 @@
             class="text-white text-opacity-40 hover:underline"
             >Discord Community</a
           >
-          <a href="/package" class="text-white text-opacity-40 hover:underline"
-            >Community Stacks</a
+          <a href="#" class="text-white text-opacity-40 hover:underline pointer-events-none"
+            >Community Stacks (Coming Soon)</a
           >
         </div>
       </div>
