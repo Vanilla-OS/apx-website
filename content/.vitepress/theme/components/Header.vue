@@ -10,7 +10,7 @@
         <img src="/assets/logo.svg" alt="Apx" class="h-8" />
       </a>
       <div
-        class="flex flex-row items-center gap-4 text-base font-light opacity-80 sm:gap-8"
+        class="flex flex-row items-center gap-4 text-base font-normal opacity-80 sm:gap-8"
       >
         <button
           id="menu-button"
@@ -35,7 +35,7 @@
         {{ theme.nav.version }}
       </p>
       <div
-        class="flex flex-col items-center gap-4 text-base font-light opacity-80 sm:flex-row sm:gap-8"
+        class="flex flex-col items-center gap-4 text-base font-normal opacity-80 sm:flex-row sm:gap-8"
       >
         <div class="flex flex-row items-center gap-4">
           <a
