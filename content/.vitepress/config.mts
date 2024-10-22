@@ -20,6 +20,7 @@ export default defineConfig({
             url: "https://docs.vanillaos.org/collections/apx",
           },
           { text: "Support", url: "https://github.com/Vanilla-OS/apx" },
+          { text: "Community Assets", url: "/community" },
         ],
         second: [
           {
@@ -42,6 +43,14 @@ export default defineConfig({
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
     ["meta", { name: "author", content: "Vanilla OS Contributors" }],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined",
+      },
+    ],
     [
       "meta",
       {
