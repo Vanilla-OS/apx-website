@@ -48,15 +48,15 @@ const textContainer = ref(null);
 const gettingStartedButton = ref(null);
 
 const finalText = "Develop\nthe way you like. Everywhere.";
-const pythonCode = "$ ./init.sh";
+const termCode = "$ ./init.sh";
 
 function typeCode() {
   const typingSpeed = 100;
   let codeIndex = 0;
 
   function type() {
-    codeOutput.value.innerHTML = pythonCode.substring(0, codeIndex);
-    if (codeIndex < pythonCode.length) {
+    codeOutput.value.innerHTML = termCode.substring(0, codeIndex);
+    if (codeIndex < termCode.length) {
       codeIndex++;
       setTimeout(type, typingSpeed);
     } else {
