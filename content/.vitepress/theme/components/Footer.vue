@@ -105,9 +105,9 @@
             >Package for Your Distribution</a
           >
           <a
-            href="#"
-            class="pointer-events-none text-white text-opacity-40 hover:underline"
-            >Sharing Stacks (Coming Soon)</a
+            href="/community"
+            class="text-white text-opacity-40 hover:underline"
+            >Sharing Stacks</a
           >
           <a
             href="https://docs.vanillaos.org/apx/en/working-w-stacks"
@@ -162,9 +162,9 @@
             >Discord Community</a
           >
           <a
-            href="#"
-            class="pointer-events-none text-white text-opacity-40 hover:underline"
-            >Community Stacks (Coming Soon)</a
+            href="/community"
+            class="text-white text-opacity-40 hover:underline"
+            >Community Assets</a
           >
         </div>
       </div>
