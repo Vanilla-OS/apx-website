@@ -39,7 +39,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted, ref } from "vue";
 
 const typedText = ref(null);
@@ -50,48 +50,35 @@ const gettingStartedButton = ref(null);
 const finalText = "Develop\nthe way you like. Everywhere.";
 const termCode = "$ ./init.sh";
 
-function typeCode() {
-  const typingSpeed = 100;
-  let codeIndex = 0;
+function typeText(element: any, text: string, typingSpeed: number, callback?: () => void) {
+  let index = 0;
+  const splitText = text.split("");
+  element.value.innerHTML = "";
 
   function type() {
-    codeOutput.value.innerHTML = termCode.substring(0, codeIndex);
-    if (codeIndex < termCode.length) {
-      codeIndex++;
-      setTimeout(type, typingSpeed);
+    if (splitText[index] === "\n") {
+      element.value.innerHTML += "<br>";
+    } else if (index < 7 && element === typedText) {
+      element.value.innerHTML += `<span class='text-green-400'>${splitText[index]}</span>`;
     } else {
-      setTimeout(typeOutputText, 500);
+      element.value.innerHTML += `<span class='text-white'>${splitText[index]}</span>`;
+    }
+    index++;
+
+    if (index < splitText.length) {
+      setTimeout(type, typingSpeed);
+    } else if (callback) {
+      setTimeout(callback, 500);
     }
   }
   type();
 }
 
-function typeOutputText() {
-  const typingSpeed = 50;
-  let textIndex = 0;
-  const splitText = finalText.split("");
-  typedText.value.innerHTML = "";
-
-  function type() {
-    if (splitText[textIndex] === "\n") {
-      typedText.value.innerHTML += "<br>";
-    } else if (textIndex < 7) {
-      typedText.value.innerHTML += `<span class='text-green-400'>${splitText[textIndex]}</span>`;
-    } else {
-      typedText.value.innerHTML += `<span class='text-white'>${splitText[textIndex]}</span>`;
-    }
-    textIndex++;
-
-    if (textIndex < splitText.length) {
-      setTimeout(type, typingSpeed);
-    } else {
-      setTimeout(() => {
-        gettingStartedButton.value.classList.add("slide-fade-in");
-        gettingStartedButton.value.style.opacity = 1;
-      }, 500);
-    }
-  }
-  type();
+function typeCode() {
+  typeText(codeOutput, termCode, 100, () => typeText(typedText, finalText, 50, () => {
+    gettingStartedButton.value.classList.add("slide-fade-in");
+    gettingStartedButton.value.style.opacity = 1;
+  }));
 }
 
 onMounted(() => {
