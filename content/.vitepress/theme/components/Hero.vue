@@ -50,7 +50,12 @@ const gettingStartedButton = ref(null);
 const finalText = "Develop\nthe way you like. Everywhere.";
 const termCode = "$ ./init.sh";
 
-function typeText(element: any, text: string, typingSpeed: number, callback?: () => void) {
+function typeText(
+  element: any,
+  text: string,
+  typingSpeed: number,
+  callback?: () => void,
+) {
   let index = 0;
   const splitText = text.split("");
   element.value.innerHTML = "";
@@ -75,10 +80,12 @@ function typeText(element: any, text: string, typingSpeed: number, callback?: ()
 }
 
 function typeCode() {
-  typeText(codeOutput, termCode, 100, () => typeText(typedText, finalText, 50, () => {
-    gettingStartedButton.value.classList.add("slide-fade-in");
-    gettingStartedButton.value.style.opacity = 1;
-  }));
+  typeText(codeOutput, termCode, 100, () =>
+    typeText(typedText, finalText, 50, () => {
+      gettingStartedButton.value.classList.add("slide-fade-in");
+      gettingStartedButton.value.style.opacity = 1;
+    }),
+  );
 }
 
 onMounted(() => {
