@@ -132,14 +132,23 @@
               </summary>
               <ul class="mt-2 space-y-1">
                 <li
-                  v-for="(command, key) in pkg.commands"
-                  :key="key"
+                  v-for="(cmd, label) in {
+                    'Auto Remove': pkg.cmdautoremove,
+                    'Clean': pkg.cmdclean,
+                    'Install': pkg.cmdinstall,
+                    'List': pkg.cmdlist,
+                    'Purge': pkg.cmdpurge,
+                    'Remove': pkg.cmdremove,
+                    'Search': pkg.cmdsearch,
+                    'Show': pkg.cmdshow,
+                    'Update': pkg.cmdupdate,
+                    'Upgrade': pkg.cmdupgrade,
+                  }"
+                  :key="label"
                   class="flex items-center gap-2"
                 >
-                  <span class="material-symbols-outlined text-green-500"
-                    >code</span
-                  >
-                  <span class="font-semibold">{{ key }}:</span> {{ command }}
+                  <span class="material-symbols-outlined text-green-500">code</span>
+                  <span class="font-semibold">{{ label }}:</span> {{ cmd }}
                 </li>
               </ul>
             </details>
@@ -166,89 +175,14 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   data() {
     return {
       currentNotebook: "stacks",
       searchQuery: "",
-      stacks: [
-        {
-          name: "vanilla-golang",
-          description:
-            "This stack provides a Golang environment for building and running Golang applications. It is based on the Vanilla OS Pico image.",
-          base: "ghcr.io/vanilla-os/pico:main",
-          packages: ["golang"],
-          pkgmanager: "apt",
-          builtin: false,
-          copied: false,
-        },
-        {
-          name: "fedora-nodejs",
-          description:
-            "This stack provides a Node.js environment for building and running Node applications. It is based on Fedora.",
-          base: "docker.io/fedora:latest",
-          packages: ["nodejs", "npm"],
-          pkgmanager: "dnf",
-          builtin: false,
-          copied: false,
-        },
-        {
-          name: "ubuntu-python",
-          description:
-            "This stack provides a Python environment for development. It is based on Ubuntu.",
-          base: "docker.io/ubuntu:latest",
-          packages: ["python3", "pip"],
-          pkgmanager: "apt",
-          builtin: true,
-          copied: false,
-        },
-      ],
-      pkgs: [
-        {
-          name: "apt",
-          commands: {
-            autoremove: "apt autoremove",
-            clean: "apt clean",
-            install: "apt install",
-            list: "apt list",
-            purge: "apt purge",
-            remove: "apt remove",
-            search: "apt search",
-            show: "apt show",
-            update: "apt update",
-            upgrade: "apt upgrade",
-          },
-          copied: false,
-        },
-        {
-          name: "dnf",
-          commands: {
-            autoremove: "dnf autoremove",
-            clean: "dnf clean all",
-            install: "dnf install",
-            list: "dnf list",
-            remove: "dnf remove",
-            search: "dnf search",
-            update: "dnf update",
-            upgrade: "dnf upgrade",
-          },
-          copied: false,
-        },
-        {
-          name: "pacman",
-          commands: {
-            autoremove: "pacman -Rns",
-            clean: "pacman -Sc",
-            install: "pacman -S",
-            list: "pacman -Ql",
-            remove: "pacman -R",
-            search: "pacman -Ss",
-            update: "pacman -Syu",
-          },
-          copied: false,
-        },
-      ],
+      stacks: [],
+      pkgs: [],
     };
   },
   computed: {
@@ -256,7 +190,7 @@ export default {
       let filtered = this.stacks;
       if (this.searchQuery) {
         filtered = filtered.filter(
-          (stack) =>
+          (stack: { name: string; description: string }) =>
             stack.name.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
             stack.description
               .toLowerCase()
@@ -267,7 +201,7 @@ export default {
     },
     filteredPkgs() {
       if (this.searchQuery) {
-        return this.pkgs.filter((pkg) =>
+        return this.pkgs.filter((pkg: { name: string }) =>
           pkg.name.toLowerCase().includes(this.searchQuery.toLowerCase()),
         );
       }
@@ -275,12 +209,27 @@ export default {
     },
   },
   methods: {
-    copyYaml(item) {
+    async fetchData() {
+      try {
+        const response = await fetch(
+          "https://raw.githubusercontent.com/Vanilla-OS/apx-community/refs/heads/main/_index.json"
+        );
+        const data = await response.json();
+        this.stacks = data.stacks;
+        this.pkgs = data.pkgManagers;
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    },
+    copyYaml(item: { copied: boolean }) {
       item.copied = true;
       setTimeout(() => {
         item.copied = false;
       }, 2000);
     },
+  },
+  created() {
+    this.fetchData();
   },
 };
 </script>
