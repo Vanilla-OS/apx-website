@@ -8,7 +8,7 @@
       <h2 class="text-3xl font-semibold lg:text-5xl">
         <span class="text-green-500">Community</span> Assets
       </h2>
-      <p class="lg:text-1xl md:text-xl text-lg font-normal lg:w-[35rem]">
+      <p class="lg:text-1xl text-lg font-normal md:text-xl lg:w-[35rem]">
         Find the stack that best suits your need.
       </p>
     </section>
@@ -172,9 +172,10 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue';
+
 interface Stack {
   name: string;
-  description: string;
   base: string;
   packages: string[];
   pkgmanager: string;
@@ -196,40 +197,36 @@ interface PkgManager {
   copied: boolean;
 }
 
-export default {
+export default defineComponent({
   data() {
     return {
-      currentNotebook: "stacks",
-      searchQuery: "",
+      currentNotebook: "stacks" as string,
+      searchQuery: "" as string,
       stacks: [] as Stack[],
       pkgs: [] as PkgManager[],
     };
   },
   computed: {
     filteredStacks(): Stack[] {
-      let filtered = this.stacks;
-      if (this.searchQuery) {
-        filtered = filtered.filter(
-          (stack: Stack) =>
+      return this.searchQuery
+        ? this.stacks.filter((stack: Stack) =>
             stack.name.toLowerCase().includes(this.searchQuery.toLowerCase())
-        );
-      }
-      return filtered;
+          )
+        : this.stacks;
     },
     filteredPkgs(): PkgManager[] {
-      if (this.searchQuery) {
-        return this.pkgs.filter((pkg: PkgManager) =>
-          pkg.name.toLowerCase().includes(this.searchQuery.toLowerCase()),
-        );
-      }
-      return this.pkgs;
+      return this.searchQuery
+        ? this.pkgs.filter((pkg: PkgManager) =>
+            pkg.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+          )
+        : this.pkgs;
     },
   },
   methods: {
     async fetchData() {
       try {
         const response = await fetch(
-          "https://raw.githubusercontent.com/Vanilla-OS/apx-community/refs/heads/main/_index.json",
+          "https://raw.githubusercontent.com/Vanilla-OS/apx-community/refs/heads/main/_index.json"
         );
         const data = await response.json();
         this.stacks = data.stacks;
@@ -238,15 +235,48 @@ export default {
         console.error("Error fetching data:", error);
       }
     },
-    copyYaml(item: { copied: boolean }) {
-      item.copied = true;
-      setTimeout(() => {
-        item.copied = false;
-      }, 2000);
+    copyYaml(item: Stack | PkgManager) {
+      let yamlContent = '';
+      if ('base' in item && 'packages' in item && 'pkgmanager' in item) {
+        yamlContent = `
+          name: ${item.name}
+          base: ${item.base}
+          packages:
+          - ${(item.packages as string[]).join("\n            - ")}
+          packageManager: ${item.pkgmanager}
+        `;
+      } else if ('cmdinstall' in item && 'cmdupdate' in item) {
+        yamlContent = `
+          name: ${item.name}
+          commands:
+            autoRemove: ${item.cmdautoremove}
+            clean: ${item.cmdclean}
+            install: ${item.cmdinstall}
+            list: ${item.cmdlist}
+            purge: ${item.cmdpurge}
+            remove: ${item.cmdremove}
+            search: ${item.cmdsearch}
+            show: ${item.cmdshow}
+            update: ${item.cmdupdate}
+            upgrade: ${item.cmdupgrade}
+        `;
+      } else {
+        yamlContent = `
+          name: ${(item as Stack | PkgManager).name}
+        `;
+      }
+      navigator.clipboard.writeText(yamlContent).then(() => {
+        item.copied = true;
+        setTimeout(() => {
+          item.copied = false;
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
     },
   },
   created() {
     this.fetchData();
   },
-};
+});
 </script>
