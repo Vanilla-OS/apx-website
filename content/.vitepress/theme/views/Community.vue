@@ -179,6 +179,7 @@ interface Stack {
   base: string;
   packages: string[];
   pkgmanager: string;
+  builtIn?: boolean;
   copied: boolean;
 }
 
@@ -194,6 +195,8 @@ interface PkgManager {
   cmdshow: string;
   cmdupdate: string;
   cmdupgrade: string;
+  builtIn?: boolean;
+  needSudo?: boolean;
   copied: boolean;
 }
 
@@ -239,26 +242,30 @@ export default defineComponent({
       let yamlContent = '';
       if ('base' in item && 'packages' in item && 'pkgmanager' in item) {
         yamlContent = `
-          name: ${item.name}
-          base: ${item.base}
-          packages:
-          - ${(item.packages as string[]).join("\n            - ")}
-          packageManager: ${item.pkgmanager}
+          - name: "${item.name}",
+            base: "${item.base}",
+            packages: [
+              "${(item.packages as string[]).join('",\n            "')}"
+            ],
+            pkgmanager: "${item.pkgmanager}",
+            builtin: ${item.builtIn ?? false}
         `;
       } else if ('cmdinstall' in item && 'cmdupdate' in item) {
         yamlContent = `
-          name: ${item.name}
-          commands:
-            autoRemove: ${item.cmdautoremove}
-            clean: ${item.cmdclean}
-            install: ${item.cmdinstall}
-            list: ${item.cmdlist}
-            purge: ${item.cmdpurge}
-            remove: ${item.cmdremove}
-            search: ${item.cmdsearch}
-            show: ${item.cmdshow}
-            update: ${item.cmdupdate}
-            upgrade: ${item.cmdupgrade}
+          - name: ${item.name}
+            model: 2
+            needSudo: ${item.needSudo}
+            cmdautoremove: ${item.cmdautoremove}
+            cmdclean: ${item.cmdclean}
+            cmdinstall: ${item.cmdinstall}
+            cmdlist: ${item.cmdlist}
+            cmdpurge: ${item.cmdpurge}
+            cmdremove: ${item.cmdremove}
+            cmdsearch: ${item.cmdsearch}
+            cmdshow: ${item.cmdshow}
+            cmdupdate: ${item.cmdupdate}
+            cmdupgrade: ${item.cmdupgrade}
+            builtin: ${item.builtIn}
         `;
       } else {
         yamlContent = `
