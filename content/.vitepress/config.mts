@@ -3,7 +3,8 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Apx",
-  description: "A versatile command-line interface (CLI) tool designed to simplify the management of operating system containers.",
+  description:
+    "A versatile command-line interface (CLI) tool designed to simplify the management of operating system containers.",
   lang: "en",
 
   themeConfig: {
@@ -59,14 +60,28 @@ export default defineConfig({
       },
     ],
     ["meta", { name: "og:title", content: "Apx" }],
-    ["meta", { name: "og:description", content: "A versatile command-line interface (CLI) tool designed to simplify the management of operating system containers." }],
+    [
+      "meta",
+      {
+        name: "og:description",
+        content:
+          "A versatile command-line interface (CLI) tool designed to simplify the management of operating system containers.",
+      },
+    ],
     ["meta", { name: "og:image", content: "/assets/cover.png" }],
     ["meta", { name: "og:url", content: "https://apx.vanillaos.org" }],
     ["meta", { name: "og:type", content: "website" }],
     ["meta", { name: "og:site_name", content: "Apx" }],
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
     ["meta", { name: "twitter:title", content: "Apx" }],
-    ["meta", { name: "twitter:description", content: "A versatile command-line interface (CLI) tool designed to simplify the management of operating system containers." }],
+    [
+      "meta",
+      {
+        name: "twitter:description",
+        content:
+          "A versatile command-line interface (CLI) tool designed to simplify the management of operating system containers.",
+      },
+    ],
     ["meta", { name: "twitter:image", content: "/assets/cover.png" }],
     ["meta", { name: "twitter:url", content: "https://apx.vanillaos.org" }],
     ["meta", { name: "twitter:site", content: "https://vanillaos.org/" }],
