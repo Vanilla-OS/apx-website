@@ -92,20 +92,50 @@
           </div>
           <button
             class="mt-auto flex flex-row items-center justify-center gap-2 rounded-full bg-[#24FF93] px-5 py-2 text-base font-medium text-black transition duration-200 hover:bg-green-500"
-            @click="copyYaml(stack)"
+            @click="downloadYaml(stack)"
           >
             <span
-              v-if="!stack.copied"
+              v-if="!stack.downloaded"
               class="material-symbols-outlined align-middle"
-              >content_copy</span
+              >download</span
             >
             <span
-              v-if="stack.copied"
+              v-if="stack.downloaded"
               class="material-symbols-outlined align-middle"
               >check</span
             >
-            {{ stack.copied ? "Copied!" : "Copy YAML" }}
+            {{ stack.downloaded ? "Downloading!" : "Download YAML" }}
           </button>
+          <details>
+            <summary class="cursor-pointer text-green-500">
+              What’s next after downloading?
+            </summary>
+            <p class="mt-2 text-gray-500 dark:text-white dark:text-opacity-45">
+              After downloading the YAML file, run the following command to
+              import the stack on your local machine.
+            </p>
+
+            <pre
+              class="mt-2 overflow-y-auto rounded-md bg-gray-100 p-4 dark:bg-[#1E1E1E]"
+            ><code class="me-4">apx stacks import -i <span class="text-green-500">{{ stack.name }}.yml</span></code></pre>
+
+            <button
+              class="mt-5 flex w-full flex-row items-center justify-center gap-2 rounded-full bg-gray-100 p-4 px-5 py-2 text-base font-medium transition duration-200 hover:bg-green-500 dark:bg-[#1E1E1E] hover:dark:text-black"
+              @click="
+                copyToClipboard('apx stacks import -i', stack.name, '.yml')
+              "
+            >
+              <span
+                class="material-symbols-outlined align-middle"
+                v-if="!copied"
+                >content_copy</span
+              >
+              <span class="material-symbols-outlined align-middle" v-if="copied"
+                >check</span
+              >
+              {{ copied ? "Copied!" : "Copy Command" }}
+            </button>
+          </details>
         </div>
         <div
           v-if="currentNotebook === 'pkgmanagers'"
@@ -151,20 +181,51 @@
           </div>
           <button
             class="mt-auto rounded-full bg-[#24FF93] px-5 py-2 text-base font-medium text-black transition duration-200 hover:bg-green-500"
-            @click="copyYaml(pkg)"
+            @click="downloadYaml(pkg)"
           >
             <span
-              v-if="!pkg.copied"
+              v-if="!pkg.downloaded"
               class="material-symbols-outlined align-middle"
-              >content_copy</span
+              >download</span
             >
             <span
-              v-if="pkg.copied"
+              v-if="pkg.downloaded"
               class="material-symbols-outlined align-middle"
               >check</span
             >
-            {{ pkg.copied ? "Copied!" : "Copy YAML" }}
+            {{ pkg.downloaded ? "Downloading!" : "Download YAML" }}
           </button>
+          <details>
+            <summary class="cursor-pointer text-green-500">
+              What’s next after downloading?
+            </summary>
+            <p class="mt-2 text-gray-500 dark:text-white dark:text-opacity-45">
+              After downloading the YAML file, run the following command to
+              import the package manager on your local machine inside the
+              directory where the YAML file is located.
+            </p>
+
+            <pre
+              class="mt-2 overflow-y-auto rounded-md bg-gray-100 p-4 dark:bg-[#1E1E1E]"
+            ><code class="me-4">apx pkgmanagers import -i <span class="text-green-500">{{ pkg.name }}.yml</span></code></pre>
+
+            <button
+              class="mt-5 flex w-full flex-row items-center justify-center gap-2 rounded-full bg-gray-100 p-4 px-5 py-2 text-base font-medium transition duration-200 hover:bg-green-500 dark:bg-[#1E1E1E]"
+              @click="
+                copyToClipboard('apx pkgmanagers import -i', pkg.name, '.yml')
+              "
+            >
+              <span
+                class="material-symbols-outlined align-middle"
+                v-if="!copied"
+                >content_copy</span
+              >
+              <span class="material-symbols-outlined align-middle" v-if="copied"
+                >check</span
+              >
+              {{ copied ? "Copied!" : "Copy Command" }}
+            </button>
+          </details>
         </div>
       </section>
     </div>
@@ -180,7 +241,7 @@ interface Stack {
   packages: string[];
   pkgmanager: string;
   builtIn?: boolean;
-  copied: boolean;
+  downloaded: boolean;
 }
 
 interface PkgManager {
@@ -197,7 +258,7 @@ interface PkgManager {
   cmdupgrade: string;
   builtIn?: boolean;
   needSudo?: boolean;
-  copied: boolean;
+  downloaded: boolean;
 }
 
 export default defineComponent({
@@ -207,6 +268,7 @@ export default defineComponent({
       searchQuery: "" as string,
       stacks: [] as Stack[],
       pkgs: [] as PkgManager[],
+      copied: false as boolean,
     };
   },
   computed: {
@@ -238,51 +300,56 @@ export default defineComponent({
         console.error("Error fetching data:", error);
       }
     },
-    copyYaml(item: Stack | PkgManager) {
+    downloadYaml(item: Stack | PkgManager) {
       let yamlContent = "";
       if ("base" in item && "packages" in item && "pkgmanager" in item) {
-        yamlContent = `
-          - name: "${item.name}",
-            base: "${item.base}",
-            packages: [
-              "${(item.packages as string[]).join('",\n            "')}"
-            ],
-            pkgmanager: "${item.pkgmanager}",
-            builtin: ${item.builtIn ?? false}
-        `;
+        yamlContent = `- name: "${item.name}"
+  base: "${item.base}"
+  packages: ["${(item.packages as string[]).join('", "')}"]
+  pkgmanager: "${item.pkgmanager}"
+  builtin: ${item.builtIn ?? false}`;
       } else if ("cmdinstall" in item && "cmdupdate" in item) {
-        yamlContent = `
-          - name: ${item.name}
-            model: 2
-            needSudo: ${item.needSudo}
-            cmdautoremove: ${item.cmdautoremove}
-            cmdclean: ${item.cmdclean}
-            cmdinstall: ${item.cmdinstall}
-            cmdlist: ${item.cmdlist}
-            cmdpurge: ${item.cmdpurge}
-            cmdremove: ${item.cmdremove}
-            cmdsearch: ${item.cmdsearch}
-            cmdshow: ${item.cmdshow}
-            cmdupdate: ${item.cmdupdate}
-            cmdupgrade: ${item.cmdupgrade}
-            builtin: ${item.builtIn}
-        `;
+        yamlContent = `- name: ${item.name}
+  model: 2
+  needSudo: ${item.needSudo}
+  cmdautoremove: ${item.cmdautoremove}
+  cmdclean: ${item.cmdclean}
+  cmdinstall: ${item.cmdinstall}
+  cmdlist: ${item.cmdlist}
+  cmdpurge: ${item.cmdpurge}
+  cmdremove: ${item.cmdremove}
+  cmdsearch: ${item.cmdsearch}
+  cmdshow: ${item.cmdshow}
+  cmdupdate: ${item.cmdupdate}
+  cmdupgrade: ${item.cmdupgrade}
+  builtin: ${item.builtIn}`;
       } else {
-        yamlContent = `
-          name: ${(item as Stack | PkgManager).name}
-        `;
+        yamlContent = `name: ${(item as Stack | PkgManager).name}`;
       }
-      navigator.clipboard
-        .writeText(yamlContent)
-        .then(() => {
-          item.copied = true;
-          setTimeout(() => {
-            item.copied = false;
-          }, 2000);
-        })
-        .catch((err) => {
-          console.error("Failed to copy: ", err);
-        });
+
+      const blob = new Blob([yamlContent], { type: "text/yaml" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${item.name}.yml`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
+      item.downloaded = true;
+      setTimeout(() => {
+        item.downloaded = false;
+      }, 2000);
+    },
+    copyToClipboard(command: string, name: string, extension: string) {
+      const fullCommand = `${command} ${name}${extension}`;
+      navigator.clipboard.writeText(fullCommand).then(() => {
+        this.copied = true;
+        setTimeout(() => {
+          this.copied = false;
+        }, 2000);
+      });
     },
   },
   created() {
