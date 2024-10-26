@@ -172,7 +172,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 interface Stack {
   name: string;
@@ -213,14 +213,14 @@ export default defineComponent({
     filteredStacks(): Stack[] {
       return this.searchQuery
         ? this.stacks.filter((stack: Stack) =>
-            stack.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+            stack.name.toLowerCase().includes(this.searchQuery.toLowerCase()),
           )
         : this.stacks;
     },
     filteredPkgs(): PkgManager[] {
       return this.searchQuery
         ? this.pkgs.filter((pkg: PkgManager) =>
-            pkg.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+            pkg.name.toLowerCase().includes(this.searchQuery.toLowerCase()),
           )
         : this.pkgs;
     },
@@ -229,7 +229,7 @@ export default defineComponent({
     async fetchData() {
       try {
         const response = await fetch(
-          "https://raw.githubusercontent.com/Vanilla-OS/apx-community/refs/heads/main/_index.json"
+          "https://raw.githubusercontent.com/Vanilla-OS/apx-community/refs/heads/main/_index.json",
         );
         const data = await response.json();
         this.stacks = data.stacks;
@@ -239,8 +239,8 @@ export default defineComponent({
       }
     },
     copyYaml(item: Stack | PkgManager) {
-      let yamlContent = '';
-      if ('base' in item && 'packages' in item && 'pkgmanager' in item) {
+      let yamlContent = "";
+      if ("base" in item && "packages" in item && "pkgmanager" in item) {
         yamlContent = `
           - name: "${item.name}",
             base: "${item.base}",
@@ -250,7 +250,7 @@ export default defineComponent({
             pkgmanager: "${item.pkgmanager}",
             builtin: ${item.builtIn ?? false}
         `;
-      } else if ('cmdinstall' in item && 'cmdupdate' in item) {
+      } else if ("cmdinstall" in item && "cmdupdate" in item) {
         yamlContent = `
           - name: ${item.name}
             model: 2
@@ -272,14 +272,17 @@ export default defineComponent({
           name: ${(item as Stack | PkgManager).name}
         `;
       }
-      navigator.clipboard.writeText(yamlContent).then(() => {
-        item.copied = true;
-        setTimeout(() => {
-          item.copied = false;
-        }, 2000);
-      }).catch(err => {
-        console.error('Failed to copy: ', err);
-      });
+      navigator.clipboard
+        .writeText(yamlContent)
+        .then(() => {
+          item.copied = true;
+          setTimeout(() => {
+            item.copied = false;
+          }, 2000);
+        })
+        .catch((err) => {
+          console.error("Failed to copy: ", err);
+        });
     },
   },
   created() {
