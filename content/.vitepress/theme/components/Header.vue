@@ -7,7 +7,14 @@
       class="flex flex-row items-center justify-between border-b border-white border-opacity-20 bg-[#101010] px-4 py-5 text-black sm:px-16"
     >
       <a href="/">
-        <img src="/assets/logo.svg" alt="Apx" class="h-8" />
+        <img
+          src="/assets/logo.svg"
+          alt="Apx Logo"
+          class="h-8 duration-300 ease-in-out hover:scale-110"
+          style="filter: drop-shadow(0 0 0px transparent)"
+          onmouseover="this.style.filter='drop-shadow(0 0 5px #24FF93)'"
+          onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
+        />
       </a>
       <div
         class="flex flex-row items-center gap-4 text-base font-normal opacity-80 sm:gap-8"
@@ -100,7 +107,7 @@
             <div class="mt-4 flex flex-col gap-2">
               <a
                 href="https://github.com/Vanilla-OS/apx"
-                class="rounded-full border border-white px-4 py-2 text-center text-base text-white transition duration-200 hover:bg-white hover:text-black"
+                class="rounded-full border border-white px-10 py-3 text-center text-base text-white transition duration-200 hover:bg-white hover:text-black"
                 >Source Code</a
               >
               <a
