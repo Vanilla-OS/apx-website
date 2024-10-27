@@ -166,6 +166,11 @@
             class="text-white text-opacity-40 hover:underline"
             >Community Assets</a
           >
+          <a
+            href="https://apx-community.vanillaos.org/feed.xml"
+            class="text-white text-opacity-40 hover:underline"
+            >Community Assets Feed</a
+          >
         </div>
       </div>
     </div>
