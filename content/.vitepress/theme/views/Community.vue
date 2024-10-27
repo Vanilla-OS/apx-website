@@ -252,6 +252,16 @@
       </section>
     </div>
   </div>
+  <p class="my-10 text-center text-black text-opacity-45 dark:text-white">
+    Check out the
+    <a
+      href="https://apx-community.vanillaos.org/feed.xml"
+      target="_blank"
+      class="text-green-500 hover:underline"
+      >Atom Feed</a
+    >
+    to get every new stack and package manager in your feed reader.
+  </p>
 </template>
 
 <script lang="ts">
