@@ -65,7 +65,21 @@
         class="mt-2 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
       >
         <div
-          v-if="currentNotebook === 'stacks'"
+          v-if="loading"
+          class="col-span-full row-span-full flex flex-col items-center justify-center text-center font-semibold opacity-60"
+        >
+          <p class="text-3xl">Loading...</p>
+        </div>
+        <div
+          v-else-if="
+            currentNotebook === 'stacks' && filteredStacks.length === 0
+          "
+          class="col-span-full row-span-full flex flex-col items-center justify-center text-center font-semibold opacity-60"
+        >
+          <p class="text-3xl">Not Found</p>
+        </div>
+        <div
+          v-else-if="currentNotebook === 'stacks'"
           v-for="(stack, index) in filteredStacks"
           :key="index"
           class="flex h-full flex-col justify-between gap-4 rounded-xl bg-white p-6 shadow-md dark:bg-[#161616]"
@@ -138,9 +152,17 @@
           </details>
         </div>
         <div
-          v-if="currentNotebook === 'pkgmanagers'"
+          v-else-if="
+            currentNotebook === 'pkgmanagers' && filteredPkgs.length === 0
+          "
+          class="col-span-full row-span-full flex flex-col items-center justify-center text-center font-semibold opacity-60"
+        >
+          <p class="text-3xl">Not Found</p>
+        </div>
+        <div
+          v-else-if="currentNotebook === 'pkgmanagers'"
           v-for="(pkg, index) in filteredPkgs"
-          :key="index"
+          :key="`pkgmanager-${index}`"
           class="flex h-full flex-col justify-between gap-4 rounded-xl bg-white p-6 shadow-md dark:bg-[#161616]"
         >
           <div>
@@ -269,6 +291,7 @@ export default defineComponent({
       stacks: [] as Stack[],
       pkgs: [] as PkgManager[],
       copied: false as boolean,
+      loading: true as boolean,
     };
   },
   computed: {
@@ -298,6 +321,8 @@ export default defineComponent({
         this.pkgs = data.pkgManagers;
       } catch (error) {
         console.error("Error fetching data:", error);
+      } finally {
+        this.loading = false;
       }
     },
     downloadYaml(item: Stack | PkgManager) {
