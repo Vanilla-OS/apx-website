@@ -60,7 +60,7 @@
         <div class="flex flex-col gap-4 text-center lg:text-left">
           <h2 class="text-3xl font-semibold lg:text-5xl">
             What are
-            <span class="text-green-500 dark:text-green-300">Subsystems</span>?
+            <span class="text-green-500">Subsystems</span>?
           </h2>
           <p class="text-xl font-normal lg:w-[40rem] lg:text-2xl">
             Apx subsystems are portable, reproducible dev environments that can
