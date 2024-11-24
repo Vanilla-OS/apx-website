@@ -39,7 +39,7 @@
       class="hidden flex-col items-center justify-between bg-[#101010] px-4 py-2 sm:flex-row sm:px-16 lg:flex"
     >
       <p class="mb-4 font-normal text-white opacity-40 sm:mb-0">
-        {{ theme.nav.version }}
+        {{ releaseTagName || "Loading..." }}
       </p>
       <div
         class="flex flex-col items-center gap-4 text-base font-normal opacity-80 sm:flex-row sm:gap-8"
@@ -133,6 +133,14 @@ const isMenuOpen = ref(false);
 function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value;
 }
+
+const releaseTagName = ref("");
+
+fetch("https://api.github.com/repos/Vanilla-OS/apx/releases/latest")
+  .then((res) => res.json())
+  .then((data) => {
+    releaseTagName.value = data.tag_name;
+  });
 </script>
 
 <style>
