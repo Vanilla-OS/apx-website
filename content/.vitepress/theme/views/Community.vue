@@ -42,7 +42,7 @@
               'border-green-500': currentNotebook === 'stacks',
               'border-transparent': currentNotebook !== 'stacks',
             }"
-            @click="currentNotebook = 'stacks'"
+            @click="(currentNotebook = 'stacks')"
           >
             Stacks
           </button>
@@ -52,7 +52,7 @@
               'border-green-500': currentNotebook === 'pkgmanagers',
               'border-transparent': currentNotebook !== 'pkgmanagers',
             }"
-            @click="currentNotebook = 'pkgmanagers'"
+            @click="(currentNotebook = 'pkgmanagers')"
           >
             Pkg Managers
           </button>
