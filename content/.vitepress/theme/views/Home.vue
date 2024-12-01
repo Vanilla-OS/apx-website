@@ -124,7 +124,7 @@
             class="flex flex-col gap-12 text-xl font-normal lg:w-[40rem] lg:text-2xl"
           >
             <p>
-              Subsystems area created using stacks, a set of instructions that
+              Subsystems are created using stacks, a set of instructions that
               defines exactly what must be included in your subsystem.
             </p>
             <p>
@@ -159,73 +159,19 @@
           class="flex flex-row items-center justify-center gap-6 text-center lg:gap-20"
         >
           <a
-            href="https://rockylinux.org/"
+            v-for="(distro, index) in distributions"
+            :key="index"
+            :href="distro.link"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src="/assets/components/distributions/rocky.svg"
-              alt="Rocky Linux"
+              :src="distro.imgSrc"
+              :alt="distro.alt"
               class="w-16 transition-all duration-300 ease-in-out hover:scale-110 lg:w-[10rem]"
               style="filter: drop-shadow(0 0 0px transparent)"
-              onmouseover="this.style.filter='drop-shadow(0 0 10px #10b981)'"
-              onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
-            />
-          </a>
-          <a
-            href="https://fedoraproject.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/assets/components/distributions/fedora.svg"
-              alt="Fedora"
-              class="w-16 transition-all duration-300 ease-in-out hover:scale-110 lg:w-[10rem]"
-              style="filter: drop-shadow(0 0 0px transparent)"
-              onmouseover="this.style.filter='drop-shadow(0 0 10px #3C6EB4)'"
-              onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
-            />
-          </a>
-          <a
-            href="https://vanillaos.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/assets/components/distributions/vanilla.svg"
-              alt="Vanilla OS"
-              class="all w-16 duration-300 ease-in-out hover:scale-110 lg:w-[10rem]"
-              style="filter: drop-shadow(0 0 0px transparent)"
-              onmouseover="this.style.filter='drop-shadow(0 0 10px #f9a932)'"
-              onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
-            />
-          </a>
-          <a
-            href="https://ubuntu.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/assets/components/distributions/ubuntu.svg"
-              alt="Ubuntu"
-              class="all w-16 duration-300 ease-in-out hover:scale-110 lg:w-[10rem]"
-              style="filter: drop-shadow(0 0 0px transparent)"
-              onmouseover="this.style.filter='drop-shadow(0 0 10px #E95420)'"
-              onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
-            />
-          </a>
-          <a
-            href="https://archlinux.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/assets/components/distributions/arch.svg"
-              alt="Arch Linux"
-              class="all w-16 duration-300 ease-in-out hover:scale-110 lg:w-[10rem]"
-              style="filter: drop-shadow(0 0 0px transparent)"
-              onmouseover="this.style.filter='drop-shadow(0 0 10px #1793D1)'"
-              onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
+              @mouseover="applyShadow($event, distro.shadowColor)"
+              @mouseout="removeShadow($event)"
             />
           </a>
         </div>
@@ -233,3 +179,50 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { ref } from "vue";
+
+const distributions = ref([
+  {
+    link: "https://rockylinux.org/",
+    imgSrc: "/assets/components/distributions/rocky.svg",
+    alt: "Rocky Linux",
+    shadowColor: "#10b981",
+  },
+  {
+    link: "https://fedoraproject.org/",
+    imgSrc: "/assets/components/distributions/fedora.svg",
+    alt: "Fedora",
+    shadowColor: "#3C6EB4",
+  },
+  {
+    link: "https://vanillaos.org/",
+    imgSrc: "/assets/components/distributions/vanilla.svg",
+    alt: "Vanilla OS",
+    shadowColor: "#f9a932",
+  },
+  {
+    link: "https://ubuntu.com/",
+    imgSrc: "/assets/components/distributions/ubuntu.svg",
+    alt: "Ubuntu",
+    shadowColor: "#E95420",
+  },
+  {
+    link: "https://archlinux.org/",
+    imgSrc: "/assets/components/distributions/arch.svg",
+    alt: "Arch Linux",
+    shadowColor: "#1793D1",
+  },
+]);
+
+const applyShadow = (event: Event, color: string) => {
+  const target = event.target as HTMLElement;
+  target.style.filter = `drop-shadow(0 0 10px ${color})`;
+};
+
+const removeShadow = (event: Event) => {
+  const target = event.target as HTMLElement;
+  target.style.filter = "drop-shadow(0 0 0px transparent)";
+};
+</script>
