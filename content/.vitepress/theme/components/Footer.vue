@@ -22,7 +22,10 @@
               alt="Go"
               class="h-6 transition-all duration-300 ease-in-out hover:scale-110"
               style="filter: none"
-              @onmouseover="this.style.filter = 'saturate(100%) invert(41%) sepia(56%) saturate(472%) hue-rotate(143deg) brightness(120%) contrast(88%)'"
+              @onmouseover="
+                this.style.filter =
+                  'saturate(100%) invert(41%) sepia(56%) saturate(472%) hue-rotate(143deg) brightness(120%) contrast(88%)'
+              "
               @onmouseout="this.style.filter = 'none'"
             />
           </a>
@@ -36,8 +39,11 @@
               alt="Vanilla OS"
               class="w-8 transition-all duration-300 ease-in-out hover:scale-110"
               style="filter: none"
-              @onmouseover="this.style.filter = 'saturate(100%) invert(85%) sepia(100%) saturate(300%) hue-rotate(1deg) brightness(100%) contrast(90%)';"
-              @onmouseout="this.style.filter = 'none';"
+              @onmouseover="
+                this.style.filter =
+                  'saturate(100%) invert(85%) sepia(100%) saturate(300%) hue-rotate(1deg) brightness(100%) contrast(90%)'
+              "
+              @onmouseout="this.style.filter = 'none'"
             />
           </a>
           <a
@@ -50,8 +56,10 @@
               alt="GitHub"
               class="w-8 transition-all duration-300 ease-in-out hover:scale-110"
               style="filter: none"
-              @onmouseover="this.style.filter = 'invert(100%) brightness(1000%)'"
-              @onmouseout="this.style.filter = 'none';"
+              @onmouseover="
+                this.style.filter = 'invert(100%) brightness(1000%)'
+              "
+              @onmouseout="this.style.filter = 'none'"
             />
           </a>
           <a
@@ -64,7 +72,10 @@
               alt="Docker"
               class="w-8 transition-all duration-300 ease-in-out hover:scale-110"
               style="filter: none; transition: filter 0.3s ease-in-out"
-              @mouseover="this.style.filter = 'brightness(0) saturate(100%) invert(32%) sepia(100%) saturate(100%) hue-rotate(240deg) brightness(90%) contrast(100%)'"
+              @mouseover="
+                this.style.filter =
+                  'brightness(0) saturate(100%) invert(32%) sepia(100%) saturate(100%) hue-rotate(240deg) brightness(90%) contrast(100%)'
+              "
               @onmouseout="this.style.filter = 'none'"
             />
           </a>
@@ -78,7 +89,10 @@
               alt="Distrobox"
               class="w-8 transition-all duration-300 ease-in-out hover:scale-110"
               style="filter: none"
-              @onmouseover="this.style.filter = 'saturate(100%) invert(39%) sepia(49%) saturate(109%) hue-rotate(5deg) brightness(150%) contrast(93%)';"
+              @onmouseover="
+                this.style.filter =
+                  'saturate(100%) invert(39%) sepia(49%) saturate(109%) hue-rotate(5deg) brightness(150%) contrast(93%)'
+              "
               @onmouseout="this.style.filter = 'none'"
             />
           </a>
