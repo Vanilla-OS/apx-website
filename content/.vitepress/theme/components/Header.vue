@@ -138,9 +138,7 @@ const releaseTagName = ref("");
 
 fetch("https://api.github.com/repos/Vanilla-OS/apx/releases/latest")
   .then((res) => res.json())
-  .then((data) => {
-    releaseTagName.value = data.tag_name;
-  });
+  .then(({ tag_name }) => (releaseTagName.value = tag_name));
 </script>
 
 <style>
