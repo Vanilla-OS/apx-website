@@ -14,7 +14,7 @@
     </section>
 
     <div
-      class="align-center sticky top-0 z-50 w-full border-b border-gray-300 bg-white px-4 dark:border-white dark:border-opacity-20 dark:bg-[#161616]"
+      class="align-center sticky top-0 z-40 w-full border-b border-gray-300 bg-white px-4 dark:border-white dark:border-opacity-20 dark:bg-[#161616]"
     >
       <div class="mx-auto flex max-w-6xl flex-col items-stretch sm:flex-row">
         <div class="relative mb-4 flex grow items-center gap-5 sm:mb-0">
