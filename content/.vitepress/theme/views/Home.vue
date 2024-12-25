@@ -168,7 +168,7 @@
             <img
               :src="distro.imgSrc"
               :alt="distro.alt"
-              class="w-16 transition-all duration-300 ease-in-out hover:scale-110 lg:w-[10rem] active:scale-90"
+              class="w-16 transition-all duration-300 ease-in-out hover:scale-110 active:scale-90 lg:w-[10rem]"
               style="filter: drop-shadow(0 0 0px transparent)"
               @mouseover="applyShadow($event, distro.shadowColor)"
               @mouseout="removeShadow($event)"
