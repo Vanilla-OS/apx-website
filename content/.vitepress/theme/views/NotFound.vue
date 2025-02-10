@@ -5,7 +5,7 @@
     <h1 class="animate-pulse text-6xl font-extrabold tracking-tighter">404</h1>
     <h2 class="text-2xl font-semibold tracking-wide">Not Found</h2>
     <hr
-      class="mx-auto my-5 w-56 rounded-full border border-black border-opacity-45 dark:border-white dark:border-opacity-20"
+      class="border-opacity-45 dark:border-opacity-20 mx-auto my-5 w-56 rounded-full border border-black dark:border-white"
     />
     <div class="flex flex-col gap-1 opacity-60">
       <p>The page you are looking for does not exist.</p>

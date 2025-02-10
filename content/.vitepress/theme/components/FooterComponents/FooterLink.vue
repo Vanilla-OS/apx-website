@@ -1,5 +1,5 @@
 <template>
-  <a :href="props.href" class="text-white text-opacity-40 hover:underline">
+  <a :href="props.href" class="text-opacity-40 text-white hover:underline">
     <slot></slot>
   </a>
 </template>

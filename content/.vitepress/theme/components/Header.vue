@@ -4,7 +4,7 @@
   >
   <nav>
     <div
-      class="flex flex-row items-center justify-between border-b border-white border-opacity-20 bg-[#101010] px-4 py-5 text-black sm:px-16"
+      class="border-opacity-20 flex flex-row items-center justify-between border-b border-white bg-[#101010] px-4 py-5 text-black sm:px-16"
     >
       <a href="/">
         <img
@@ -30,7 +30,7 @@
           v-for="link in theme.nav.links.first"
           :key="link"
           :href="link.url"
-          class="duration-20 hidden text-white transition-colors hover:text-opacity-80 lg:inline-flex"
+          class="hover:text-opacity-80 hidden text-white transition-colors duration-20 lg:inline-flex"
           >{{ link.text }}</a
         >
       </div>
@@ -49,7 +49,7 @@
             v-for="link in theme.nav.links.second"
             :key="link"
             :href="link.url"
-            class="duration-20 text-white transition-colors hover:text-opacity-80"
+            class="hover:text-opacity-80 text-white transition-colors duration-20"
             >{{ link.text }}</a
           >
         </div>
@@ -73,11 +73,11 @@
     <transition name="fade">
       <div
         v-if="isMenuOpen"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-20 backdrop-blur-md"
+        class="bg-opacity-20 fixed inset-0 z-50 flex items-center justify-center bg-black backdrop-blur-md"
         @click="toggleMenu"
       >
         <button
-          class="absolute right-7 top-7 text-gray-300 mix-blend-difference"
+          class="absolute top-7 right-7 text-gray-300 mix-blend-difference"
         >
           <span class="material-symbols-outlined">close</span>
         </button>
@@ -92,7 +92,7 @@
               >{{ link.text }}</a
             >
           </div>
-          <hr class="my-4 border border-white border-opacity-20" />
+          <hr class="border-opacity-20 my-4 border border-white" />
           <div class="flex flex-col items-center">
             <div class="flex flex-col items-center gap-4 text-base font-light">
               <a

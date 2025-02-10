@@ -15,7 +15,7 @@
         <div ref="textContainer" class="mt-4 flex flex-col items-center gap-4">
           <h1
             ref="typedText"
-            class="max-w-[450px] text-4xl font-semibold leading-tight lg:text-6xl"
+            class="max-w-[450px] text-4xl leading-tight font-semibold lg:text-6xl"
           ></h1>
           <a
             href="https://docs.vanillaos.org/apx/en/getting-started"
@@ -27,7 +27,7 @@
       </div>
       <a
         href="#what-is"
-        class="z-10 mb-10 animate-bounce text-white text-opacity-40"
+        class="text-opacity-40 z-10 mb-10 animate-bounce text-white"
       >
         <span
           class="material-symbols-outlined text-4xl transition duration-200 hover:text-white"

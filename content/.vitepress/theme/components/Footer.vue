@@ -100,19 +100,19 @@
       <div class="flex flex-col flex-wrap items-center gap-5 sm:flex-row">
         <img src="/assets/components/footer/logo.svg" alt="Logo" />
         <div class="flex flex-col gap-2 text-center sm:text-left">
-          <p class="text-white text-opacity-40">
+          <p class="text-opacity-40 text-white">
             All trademarks and logos are the property of their respective
             owners.
           </p>
-          <p class="text-white text-opacity-40">Apx, Copyright 2024</p>
+          <p class="text-opacity-40 text-white">Apx, Copyright 2024</p>
         </div>
       </div>
       <div class="flex flex-col gap-1 text-center sm:text-right">
-        <p class="text-white text-opacity-40">
+        <p class="text-opacity-40 text-white">
           Made with coffee by
           <span class="text-green-500">&lt;developers&gt;</span>
         </p>
-        <p class="text-white text-opacity-40">
+        <p class="text-opacity-40 text-white">
           Sponsored by
           <a
             href="https://fabricators.ltd"

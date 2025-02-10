@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col gap-2">
-    <h3 class="text-base font-semibold text-white text-opacity-70">
+    <h3 class="text-opacity-70 text-base font-semibold text-white">
       {{ props.title }}
     </h3>
     <slot></slot>

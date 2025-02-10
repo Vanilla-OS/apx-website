@@ -14,13 +14,13 @@
     </section>
 
     <div
-      class="align-center sticky top-0 z-40 w-full border-b border-gray-300 bg-white px-4 dark:border-white dark:border-opacity-20 dark:bg-[#161616]"
+      class="align-center dark:border-opacity-20 sticky top-0 z-40 w-full border-b border-gray-300 bg-white px-4 dark:border-white dark:bg-[#161616]"
     >
       <div class="mx-auto flex max-w-6xl flex-col items-stretch sm:flex-row">
         <div class="relative mb-4 flex grow items-center gap-5 sm:mb-0">
           <div>
             <span
-              class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 transform text-gray-500"
+              class="material-symbols-outlined absolute top-1/2 left-4 -translate-y-1/2 transform text-gray-500"
             >
               search
             </span>
@@ -96,7 +96,7 @@
                 settings: 'Package Manager: ' + stack.pkgmanager,
               }"
               :key="key"
-              class="text-md mb-1 flex items-center gap-2 text-gray-500 dark:text-white dark:text-opacity-45"
+              class="text-md dark:text-opacity-45 mb-1 flex items-center gap-2 text-gray-500 dark:text-white"
             >
               <span class="material-symbols-outlined text-green-500">{{
                 key
@@ -124,7 +124,7 @@
             <summary class="cursor-pointer text-green-500">
               What’s next after downloading?
             </summary>
-            <p class="mt-2 text-gray-500 dark:text-white dark:text-opacity-45">
+            <p class="dark:text-opacity-45 mt-2 text-gray-500 dark:text-white">
               After downloading the YAML file, run the following command to
               import the stack on your local machine.
             </p>
@@ -221,7 +221,7 @@
             <summary class="cursor-pointer text-green-500">
               What’s next after downloading?
             </summary>
-            <p class="mt-2 text-gray-500 dark:text-white dark:text-opacity-45">
+            <p class="dark:text-opacity-45 mt-2 text-gray-500 dark:text-white">
               After downloading the YAML file, run the following command to
               import the package manager on your local machine inside the
               directory where the YAML file is located.
@@ -252,7 +252,7 @@
       </section>
     </div>
   </div>
-  <p class="my-10 text-center text-black text-opacity-45 dark:text-white">
+  <p class="text-opacity-45 my-10 text-center text-black dark:text-white">
     Check out the
     <a
       href="https://apx-community.vanillaos.org/feed.xml"

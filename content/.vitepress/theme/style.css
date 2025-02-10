@@ -13,7 +13,7 @@ body {
 }
 
 .material-symbols-outlined {
-  @apply inline-block select-none align-middle;
+  @apply inline-block align-middle select-none;
 }
 
 .skip-to-content {
@@ -26,7 +26,7 @@ body {
   margin: -1px;
   border: 0;
   overflow: hidden;
-  @apply bg-black bg-opacity-50 p-4 text-white;
+  @apply bg-opacity-50 bg-black p-4 text-white;
 }
 
 .skip-to-content:focus {
