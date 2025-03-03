@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 html {
   @apply scroll-smooth;
+  font-family: "Outfit", sans-serif;
 }
 
 body {
@@ -26,7 +25,7 @@ body {
   margin: -1px;
   border: 0;
   overflow: hidden;
-  @apply bg-opacity-50 bg-black p-4 text-white;
+  @apply bg-black/50 p-4 text-white;
 }
 
 .skip-to-content:focus {

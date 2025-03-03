@@ -4,7 +4,7 @@
   >
   <nav>
     <div
-      class="border-opacity-20 flex flex-row items-center justify-between border-b border-white bg-[#101010] px-4 py-5 text-black sm:px-16"
+      class="border-opacity-20 flex flex-row items-center justify-between border-b border-white/5 bg-[#101010] px-4 py-5 text-black sm:px-16"
     >
       <a href="/">
         <img

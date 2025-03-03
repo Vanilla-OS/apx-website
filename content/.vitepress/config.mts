@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import tailwindcss from "@tailwindcss/vite";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -47,7 +48,8 @@ export default defineConfig({
       "link",
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined",
+        href:
+          "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined",
       },
     ],
     [
@@ -86,4 +88,8 @@ export default defineConfig({
     ["meta", { name: "twitter:site", content: "https://vanillaos.org/" }],
     ["meta", { name: "twitter:creator", content: "@VanillaOSLinux" }],
   ],
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
