@@ -105,7 +105,7 @@
             </div>
           </div>
           <button
-            class="mt-auto flex flex-row items-center justify-center gap-2 rounded-full bg-[#24FF93] px-5 py-2 text-base font-medium text-black transition duration-200 hover:bg-green-500 cursor-pointer"
+            class="mt-auto flex cursor-pointer flex-row items-center justify-center gap-2 rounded-full bg-[#24FF93] px-5 py-2 text-base font-medium text-black transition duration-200 hover:bg-green-500"
             @click="downloadYaml(stack)"
           >
             <span
