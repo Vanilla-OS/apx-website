@@ -88,9 +88,9 @@
       </div>
     </div>
     <div
-      class="flex flex-col flex-wrap items-center justify-between gap-6 px-4 pt-10 sm:flex-row sm:gap-0 sm:px-10 lg:px-20"
+      class="flex flex-col flex-wrap items-center justify-between gap-6 px-4 pt-10 sm:flex-row sm:px-10 lg:px-20"
     >
-      <div class="flex flex-col flex-wrap items-center gap-5 sm:flex-row">
+      <div class="flex flex-col items-center gap-5 sm:flex-row">
         <img src="/assets/components/footer/logo.svg" alt="Logo" />
         <div class="flex flex-col gap-2 text-center sm:text-left">
           <p class="text-opacity-40 text-white">
@@ -100,7 +100,7 @@
           <p class="text-opacity-40 text-white">Apx, Copyright 2024</p>
         </div>
       </div>
-      <div class="flex flex-col gap-1 text-center sm:text-right">
+      <div class="flex flex-col gap-1 lg:text-center">
         <p class="text-opacity-40 text-white">
           Made with coffee by
           <span class="text-green-500">&lt;developers&gt;</span>

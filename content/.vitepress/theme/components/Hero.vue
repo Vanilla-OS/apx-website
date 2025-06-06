@@ -15,11 +15,11 @@
         <div ref="textContainer" class="mt-4 flex flex-col items-center gap-4">
           <h1
             ref="typedText"
-            class="max-w-[450px] text-4xl leading-tight font-semibold lg:text-6xl"
+            class="max-w-[450px] text-5xl leading-tight font-semibold lg:text-6xl"
           ></h1>
           <a
             href="https://docs.vanillaos.org/apx/en/getting-started"
-            class="mt-5 rounded-full bg-white px-7 py-2 text-base font-medium text-black opacity-0 transition duration-200 hover:bg-green-500 lg:text-lg"
+            class="mt-5 rounded-full bg-white px-7 py-2 text-lg font-medium text-black opacity-0 transition duration-200 hover:bg-green-500 lg:text-lg"
             ref="gettingStartedButton"
             >Getting Started</a
           >

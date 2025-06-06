@@ -93,7 +93,7 @@
       </section>
       <section
         id="stack"
-        class="flex flex-row flex-wrap items-center justify-center gap-12"
+        class="flex flex-row flex-wrap items-center justify-center gap-12 lg:mb-64"
       >
         <img
           src="/assets/components/decorations/ellipse-2.png"
@@ -145,7 +145,7 @@
             What is your
             <span class="text-green-500">distribution</span>?
           </h2>
-          <p class="text-xl font-normal lg:w-[40rem] lg:text-2xl">
+          <p class="text-xl font-normal lg:w-2xl lg:text-2xl">
             Does not matter. Base your subsystems on top of any Linux
             distribution, all you need is a Docker image, that’s all.
           </p>
@@ -153,10 +153,10 @@
         <img
           src="/assets/components/decorations/ellipse-3.png"
           alt="Blurry Circle, decorative element"
-          class="absolute left-0 w-[20rem] select-none lg:w-[40rem]"
+          class="absolute left-0 w-80 select-none lg:w-2xl"
         />
         <div
-          class="flex flex-row items-center justify-center gap-6 text-center lg:gap-20"
+          class="flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-20 text-center"
         >
           <a
             v-for="(distro, index) in distributions"
@@ -168,7 +168,7 @@
             <img
               :src="distro.imgSrc"
               :alt="distro.alt"
-              class="w-16 transition-all duration-300 ease-in-out hover:scale-110 active:scale-90 lg:w-[10rem]"
+              class="w-24 md:w-24 transition-all duration-300 ease-in-out hover:scale-110 active:scale-90 lg:w-40"
               style="filter: drop-shadow(0 0 0px transparent)"
               @mouseover="applyShadow($event, distro.shadowColor)"
               @mouseout="removeShadow($event)"
