@@ -15,36 +15,31 @@
           <FooterIcon
             href="https://go.dev"
             src="/assets/components/footer/icons/go.svg"
-            alt="Go"
-            filter="saturate(100%) invert(41%) sepia(56%) saturate(472%) hue-rotate(143deg) brightness(120%) contrast(88%)"
+            hoverColor="#02ADD7"
           />
           <FooterIcon
             href="https://vanillaos.org"
             src="/assets/components/footer/icons/vanillaos.svg"
-            alt="Vanilla OS"
-            filter="saturate(100%) invert(85%) sepia(100%) saturate(300%) hue-rotate(1deg) brightness(100%) contrast(90%)"
+            hoverColor="#FCCB44"
           />
           <FooterIcon
             href="https://github.com"
             src="/assets/components/footer/icons/github.svg"
-            alt="GitHub"
-            filter="invert(100%) brightness(1000%)"
+            hoverColor="#FFFFFF"
           />
           <FooterIcon
             href="https://docker.com"
             src="/assets/components/footer/icons/docker.svg"
-            alt="Docker"
-            filter="brightness(0) saturate(100%) invert(32%) sepia(100%) saturate(100%) hue-rotate(240deg) brightness(90%) contrast(100%)"
+            hoverColor="#2496ED"
           />
           <FooterIcon
             href="https://distrobox.it"
             src="/assets/components/footer/icons/distrobox.svg"
-            alt="Distrobox"
-            filter="saturate(100%) invert(39%) sepia(49%) saturate(109%) hue-rotate(5deg) brightness(150%) contrast(93%)"
+            hoverColor="#F1E1D1"
           />
         </div>
       </div>
-      <div class="flex flex-col gap-10 lg:flex-row lg:gap-48">
+      <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-16 lg:flex lg:flex-row lg:gap-48">
         <FooterSection title="Help">
           <FooterLink href="https://docs.vanillaos.org/collections/apx"
             >Documentation</FooterLink

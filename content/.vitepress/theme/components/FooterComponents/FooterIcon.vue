@@ -4,30 +4,31 @@
     target="_blank"
     class="flex items-center justify-center"
   >
-    <img
-      :src="props.src"
-      :alt="props.alt"
-      class="w-8 transition-all duration-300 ease-in-out hover:scale-110"
-      style="filter: none"
-      @mouseover="applyFilter"
-      @mouseout="removeFilter"
-    />
+    <div
+      class="icon transition-all duration-300 ease-in-out hover:scale-110"
+      :style="{
+        backgroundColor: isHovered ? props.hoverColor || '#727976' : '#727976',
+        WebkitMask: `url(${props.src}) no-repeat center`,
+        mask: `url(${props.src}) no-repeat center`,
+        WebkitMaskSize: 'contain',
+        maskSize: 'contain',
+        width: `32px`,
+        height: `32px`,
+      }"
+      @mouseover="isHovered = true"
+      @mouseout="isHovered = false"
+    ></div>
   </a>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+
 const props = defineProps({
   href: String,
   src: String,
-  alt: String,
-  filter: String,
+  hoverColor: String,
 });
 
-const applyFilter = (event: MouseEvent) => {
-  (event.target as HTMLImageElement).style.filter = props.filter;
-};
-
-const removeFilter = (event: MouseEvent) => {
-  (event.target as HTMLImageElement).style.filter = "none";
-};
+const isHovered = ref(false);
 </script>
