@@ -156,7 +156,7 @@
           class="absolute left-0 w-80 select-none lg:w-2xl"
         />
         <div
-          class="flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-20 text-center"
+          class="flex flex-col items-center justify-center gap-12 text-center md:flex-row lg:gap-20"
         >
           <a
             v-for="(distro, index) in distributions"
@@ -168,7 +168,7 @@
             <img
               :src="distro.imgSrc"
               :alt="distro.alt"
-              class="w-24 md:w-24 transition-all duration-300 ease-in-out hover:scale-110 active:scale-90 lg:w-40"
+              class="w-24 transition-all duration-300 ease-in-out hover:scale-110 active:scale-90 md:w-24 lg:w-40"
               style="filter: drop-shadow(0 0 0px transparent)"
               @mouseover="applyShadow($event, distro.shadowColor)"
               @mouseout="removeShadow($event)"

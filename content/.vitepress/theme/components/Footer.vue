@@ -39,7 +39,9 @@
           />
         </div>
       </div>
-      <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-16 lg:flex lg:flex-row lg:gap-48">
+      <div
+        class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-16 lg:flex lg:flex-row lg:gap-48"
+      >
         <FooterSection title="Help">
           <FooterLink href="https://docs.vanillaos.org/collections/apx"
             >Documentation</FooterLink
@@ -65,8 +67,7 @@
           >
         </FooterSection>
         <FooterSection title="Get Apx">
-          <FooterLink
-            href="https:c//github.com/Vanilla-OS/apx/releases/latest"
+          <FooterLink href="https:c//github.com/Vanilla-OS/apx/releases/latest"
             >Download</FooterLink
           >
           <FooterLink href="https://github.com/Vanilla-OS/apx"
