@@ -56,25 +56,23 @@
             >Creating Stacks</FooterLink
           >
         </FooterSection>
-        <div class="flex flex-col gap-5">
-          <FooterSection title="Developers">
-            <FooterLink href="https://github.com/Vanilla-OS/apx"
-              >Source Code</FooterLink
-            >
-            <FooterLink href="https://github.com/Vanilla-OS/apx/issues"
-              >Report a bug</FooterLink
-            >
-          </FooterSection>
-          <FooterSection title="Get Apx">
-            <FooterLink
-              href="https:c//github.com/Vanilla-OS/apx/releases/latest"
-              >Download</FooterLink
-            >
-            <FooterLink href="https://github.com/Vanilla-OS/apx"
-              >Build From Source</FooterLink
-            >
-          </FooterSection>
-        </div>
+        <FooterSection title="Developers">
+          <FooterLink href="https://github.com/Vanilla-OS/apx"
+            >Source Code</FooterLink
+          >
+          <FooterLink href="https://github.com/Vanilla-OS/apx/issues"
+            >Report a bug</FooterLink
+          >
+        </FooterSection>
+        <FooterSection title="Get Apx">
+          <FooterLink
+            href="https:c//github.com/Vanilla-OS/apx/releases/latest"
+            >Download</FooterLink
+          >
+          <FooterLink href="https://github.com/Vanilla-OS/apx"
+            >Build From Source</FooterLink
+          >
+        </FooterSection>
         <FooterSection title="Community">
           <FooterLink href="https://github.com/orgs/Vanilla-OS/discussions"
             >GitHub</FooterLink
