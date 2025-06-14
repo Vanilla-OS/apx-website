@@ -136,7 +136,6 @@ function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value;
 }
 
-
 const releaseTagName = ref("");
 if (typeof window !== "undefined") {
   fetch("https://api.github.com/repos/Vanilla-OS/apx/releases/latest")

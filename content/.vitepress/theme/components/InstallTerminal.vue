@@ -16,36 +16,40 @@
         wget
       </button>
     </div>
-    <pre class="overflow-x-auto rounded-md bg-black p-4 text-green-400"><code>{{ command }}</code></pre>
+    <pre
+      class="overflow-x-auto rounded-md bg-black p-4 text-green-400"
+    ><code>{{ command }}</code></pre>
     <button
       class="mt-4 w-full rounded-full bg-gray-100 p-2 text-black transition duration-200 hover:bg-green-500"
       @click="copy"
     >
-      <span class="material-symbols-outlined align-middle" v-if="!copied">content_copy</span>
+      <span class="material-symbols-outlined align-middle" v-if="!copied"
+        >content_copy</span
+      >
       <span class="material-symbols-outlined align-middle" v-else>check</span>
-      {{ copied ? 'Copied!' : 'Copy Command' }}
+      {{ copied ? "Copied!" : "Copy Command" }}
     </button>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed } from "vue";
 
-const tab = ref<'curl' | 'wget'>('curl')
-const copied = ref(false)
+const tab = ref<"curl" | "wget">("curl");
+const copied = ref(false);
 
 const command = computed(() =>
-  tab.value === 'curl'
-    ? 'curl -s https://apx.vanillaos.org/install.sh | bash'
-    : 'wget -qO- https://apx.vanillaos.org/install.sh | bash'
-)
+  tab.value === "curl"
+    ? "curl -s https://apx.vanillaos.org/install.sh | bash"
+    : "wget -qO- https://apx.vanillaos.org/install.sh | bash",
+);
 
 function copy() {
   navigator.clipboard.writeText(command.value).then(() => {
-    copied.value = true
+    copied.value = true;
     setTimeout(() => {
-      copied.value = false
-    }, 2000)
-  })
+      copied.value = false;
+    }, 2000);
+  });
 }
 </script>
