@@ -67,9 +67,7 @@
           >
         </FooterSection>
         <FooterSection title="Get Apx">
-          <FooterLink href="https:c//github.com/Vanilla-OS/apx/releases/latest"
-            >Download</FooterLink
-          >
+          <FooterLink href="/install">Install</FooterLink>
           <FooterLink href="https://github.com/Vanilla-OS/apx"
             >Build From Source</FooterLink
           >
