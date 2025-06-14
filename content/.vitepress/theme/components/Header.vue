@@ -62,10 +62,11 @@
             >Source Code</a
           >
           <a
-            href="https://github.com/Vanilla-OS/apx/releases/latest"
+            href="/install"
             class="rounded-full bg-[#24FF93] px-5 py-2 text-base font-medium text-black transition duration-200 hover:bg-green-500"
-            >Download</a
           >
+            Install
+          </a>
         </div>
       </div>
     </div>
@@ -111,10 +112,12 @@
                 >Source Code</a
               >
               <a
-                href="https://github.com/Vanilla-OS/apx/releases/latest"
+                href="/install"
                 class="rounded-full bg-green-400 px-4 py-2 text-center text-base text-black transition duration-200 hover:bg-green-500"
-                >Download</a
+                @click="toggleMenu"
               >
+                Install
+              </a>
             </div>
           </div>
         </div>
@@ -126,7 +129,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useData } from "vitepress";
-
 const { theme } = useData();
 const isMenuOpen = ref(false);
 
@@ -134,11 +136,13 @@ function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value;
 }
 
-const releaseTagName = ref("");
 
-fetch("https://api.github.com/repos/Vanilla-OS/apx/releases/latest")
-  .then((res) => res.json())
-  .then(({ tag_name }) => (releaseTagName.value = tag_name));
+const releaseTagName = ref("");
+if (typeof window !== "undefined") {
+  fetch("https://api.github.com/repos/Vanilla-OS/apx/releases/latest")
+    .then((res) => res.json())
+    .then(({ tag_name }) => (releaseTagName.value = tag_name));
+}
 </script>
 
 <style>
