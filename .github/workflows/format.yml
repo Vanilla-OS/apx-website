@@ -31,7 +31,7 @@ jobs:
 
       - name: Format Code
         run: |
-          pnpm exec prettier . --write
+          pnpm run format
 
       - name: Commit changes
         run: |
