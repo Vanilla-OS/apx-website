@@ -1,7 +1,7 @@
 <template>
   <div
     class="relative flex h-[750px] w-screen items-center justify-center bg-cover bg-center"
-    style="background-image: url(&quot;/assets/components/hero-bg.png&quot;)"
+    style="background-image: url('/assets/components/hero-bg.png')"
   >
     <div class="flex h-full flex-col items-center justify-between">
       <div
@@ -40,29 +40,29 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { onMounted, ref } from 'vue';
 
 const typedText = ref(null);
 const codeOutput = ref(null);
 const textContainer = ref(null);
 const gettingStartedButton = ref(null);
 
-const finalText = "Develop\nthe way you like. Everywhere.";
-const termCode = "$ ./init.sh";
+const finalText = 'Develop\nthe way you like. Everywhere.';
+const termCode = '$ ./init.sh';
 
 function typeText(
   element: any,
   text: string,
   typingSpeed: number,
-  callback?: () => void,
+  callback?: () => void
 ) {
   let index = 0;
-  const splitText = text.split("");
-  element.value.innerHTML = "";
+  const splitText = text.split('');
+  element.value.innerHTML = '';
 
   function type() {
-    if (splitText[index] === "\n") {
-      element.value.innerHTML += "<br>";
+    if (splitText[index] === '\n') {
+      element.value.innerHTML += '<br>';
     } else if (index < 7 && element === typedText) {
       element.value.innerHTML += `<span class='text-green-400'>${splitText[index]}</span>`;
     } else {
@@ -82,9 +82,9 @@ function typeText(
 function typeCode() {
   typeText(codeOutput, termCode, 100, () =>
     typeText(typedText, finalText, 50, () => {
-      gettingStartedButton.value.classList.add("slide-fade-in");
+      gettingStartedButton.value.classList.add('slide-fade-in');
       gettingStartedButton.value.style.opacity = 1;
-    }),
+    })
   );
 }
 
@@ -110,7 +110,7 @@ onMounted(() => {
 }
 
 .typing-effect::after {
-  content: "|";
+  content: '|';
   animation: blink 1s step-end infinite;
 }
 

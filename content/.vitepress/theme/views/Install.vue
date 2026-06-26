@@ -83,5 +83,5 @@
 </template>
 
 <script setup lang="ts">
-import InstallTerminal from "../components/InstallTerminal.vue";
+import InstallTerminal from '../components/InstallTerminal.vue';
 </script>

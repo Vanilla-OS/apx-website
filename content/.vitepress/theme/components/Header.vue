@@ -39,7 +39,7 @@
       class="hidden flex-col items-center justify-between bg-[#101010] px-4 py-2 sm:flex-row sm:px-16 lg:flex"
     >
       <p class="mb-4 font-normal text-white opacity-40 sm:mb-0">
-        {{ releaseTagName || "Loading..." }}
+        {{ releaseTagName || 'Loading...' }}
       </p>
       <div
         class="flex flex-col items-center gap-4 text-base font-normal opacity-80 sm:flex-row sm:gap-8"
@@ -127,8 +127,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { useData } from "vitepress";
+import { ref } from 'vue';
+import { useData } from 'vitepress';
 const { theme } = useData();
 const isMenuOpen = ref(false);
 
@@ -136,9 +136,9 @@ function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value;
 }
 
-const releaseTagName = ref("");
-if (typeof window !== "undefined") {
-  fetch("https://api.github.com/repos/Vanilla-OS/apx/releases/latest")
+const releaseTagName = ref('');
+if (typeof window !== 'undefined') {
+  fetch('https://api.github.com/repos/Vanilla-OS/apx/releases/latest')
     .then((res) => res.json())
     .then(({ tag_name }) => (releaseTagName.value = tag_name));
 }

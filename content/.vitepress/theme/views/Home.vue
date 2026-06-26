@@ -181,38 +181,38 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue';
 
 const distributions = ref([
   {
-    link: "https://rockylinux.org/",
-    imgSrc: "/assets/components/distributions/rocky.svg",
-    alt: "Rocky Linux",
-    shadowColor: "#10b981",
+    link: 'https://rockylinux.org/',
+    imgSrc: '/assets/components/distributions/rocky.svg',
+    alt: 'Rocky Linux',
+    shadowColor: '#10b981',
   },
   {
-    link: "https://fedoraproject.org/",
-    imgSrc: "/assets/components/distributions/fedora.svg",
-    alt: "Fedora",
-    shadowColor: "#3C6EB4",
+    link: 'https://fedoraproject.org/',
+    imgSrc: '/assets/components/distributions/fedora.svg',
+    alt: 'Fedora',
+    shadowColor: '#3C6EB4',
   },
   {
-    link: "https://vanillaos.org/",
-    imgSrc: "/assets/components/distributions/vanilla.svg",
-    alt: "Vanilla OS",
-    shadowColor: "#f9a932",
+    link: 'https://vanillaos.org/',
+    imgSrc: '/assets/components/distributions/vanilla.svg',
+    alt: 'Vanilla OS',
+    shadowColor: '#f9a932',
   },
   {
-    link: "https://ubuntu.com/",
-    imgSrc: "/assets/components/distributions/ubuntu.svg",
-    alt: "Ubuntu",
-    shadowColor: "#E95420",
+    link: 'https://ubuntu.com/',
+    imgSrc: '/assets/components/distributions/ubuntu.svg',
+    alt: 'Ubuntu',
+    shadowColor: '#E95420',
   },
   {
-    link: "https://archlinux.org/",
-    imgSrc: "/assets/components/distributions/arch.svg",
-    alt: "Arch Linux",
-    shadowColor: "#1793D1",
+    link: 'https://archlinux.org/',
+    imgSrc: '/assets/components/distributions/arch.svg',
+    alt: 'Arch Linux',
+    shadowColor: '#1793D1',
   },
 ]);
 
@@ -223,6 +223,6 @@ const applyShadow = (event: Event, color: string) => {
 
 const removeShadow = (event: Event) => {
   const target = event.target as HTMLElement;
-  target.style.filter = "drop-shadow(0 0 0px transparent)";
+  target.style.filter = 'drop-shadow(0 0 0px transparent)';
 };
 </script>

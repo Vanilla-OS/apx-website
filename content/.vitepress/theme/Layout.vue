@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { useData } from "vitepress";
-import Hero from "./components/Hero.vue";
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
-import Home from "./views/Home.vue";
-import Community from "./views/Community.vue";
-import Install from "./views/Install.vue";
-import NotFound from "./views/NotFound.vue";
+import { useData } from 'vitepress';
+import Hero from './components/Hero.vue';
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
+import Home from './views/Home.vue';
+import Community from './views/Community.vue';
+import Install from './views/Install.vue';
+import NotFound from './views/NotFound.vue';
 
 // https://vitepress.dev/reference/runtime-api#usedata
 const { frontmatter, page } = useData();

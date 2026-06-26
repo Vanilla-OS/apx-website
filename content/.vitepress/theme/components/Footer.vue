@@ -118,7 +118,7 @@
 </template>
 
 <script setup lang="ts">
-import FooterIcon from "./FooterComponents/FooterIcon.vue";
-import FooterLink from "./FooterComponents/FooterLink.vue";
-import FooterSection from "./FooterComponents/FooterSection.vue";
+import FooterIcon from './FooterComponents/FooterIcon.vue';
+import FooterLink from './FooterComponents/FooterLink.vue';
+import FooterSection from './FooterComponents/FooterSection.vue';
 </script>

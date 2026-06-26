@@ -3,7 +3,7 @@
     <section
       id="community-hero"
       class="flex flex-col items-center justify-center gap-4 py-16 text-center text-white"
-      style="background-image: url(&quot;/assets/components/hero-bg.png&quot;)"
+      style="background-image: url('/assets/components/hero-bg.png')"
     >
       <h2 class="text-3xl font-semibold lg:text-5xl">
         <span class="text-green-500">Community</span> Assets
@@ -118,7 +118,7 @@
               class="material-symbols-outlined align-middle"
               >check</span
             >
-            {{ stack.downloaded ? "Downloading!" : "Download YAML" }}
+            {{ stack.downloaded ? 'Downloading!' : 'Download YAML' }}
           </button>
           <details>
             <summary class="cursor-pointer text-green-500">
@@ -147,7 +147,7 @@
               <span class="material-symbols-outlined align-middle" v-if="copied"
                 >check</span
               >
-              {{ copied ? "Copied!" : "Copy Command" }}
+              {{ copied ? 'Copied!' : 'Copy Command' }}
             </button>
           </details>
         </div>
@@ -215,7 +215,7 @@
               class="material-symbols-outlined align-middle"
               >check</span
             >
-            {{ pkg.downloaded ? "Downloading!" : "Download YAML" }}
+            {{ pkg.downloaded ? 'Downloading!' : 'Download YAML' }}
           </button>
           <details>
             <summary class="cursor-pointer text-green-500">
@@ -245,7 +245,7 @@
               <span class="material-symbols-outlined align-middle" v-if="copied"
                 >check</span
               >
-              {{ copied ? "Copied!" : "Copy Command" }}
+              {{ copied ? 'Copied!' : 'Copy Command' }}
             </button>
           </details>
         </div>
@@ -265,7 +265,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 interface Stack {
   name: string;
@@ -296,8 +296,8 @@ interface PkgManager {
 export default defineComponent({
   data() {
     return {
-      currentNotebook: "stacks" as string,
-      searchQuery: "" as string,
+      currentNotebook: 'stacks' as string,
+      searchQuery: '' as string,
       stacks: [] as Stack[],
       pkgs: [] as PkgManager[],
       copied: false as boolean,
@@ -308,14 +308,14 @@ export default defineComponent({
     filteredStacks(): Stack[] {
       return this.searchQuery
         ? this.stacks.filter((stack: Stack) =>
-            stack.name.toLowerCase().includes(this.searchQuery.toLowerCase()),
+            stack.name.toLowerCase().includes(this.searchQuery.toLowerCase())
           )
         : this.stacks;
     },
     filteredPkgs(): PkgManager[] {
       return this.searchQuery
         ? this.pkgs.filter((pkg: PkgManager) =>
-            pkg.name.toLowerCase().includes(this.searchQuery.toLowerCase()),
+            pkg.name.toLowerCase().includes(this.searchQuery.toLowerCase())
           )
         : this.pkgs;
     },
@@ -324,26 +324,26 @@ export default defineComponent({
     async fetchData() {
       try {
         const response = await fetch(
-          "https://raw.githubusercontent.com/Vanilla-OS/apx-community/refs/heads/main/_index.json",
+          'https://raw.githubusercontent.com/Vanilla-OS/apx-community/refs/heads/main/_index.json'
         );
         const data = await response.json();
         this.stacks = data.stacks;
         this.pkgs = data.pkgManagers;
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error('Error fetching data:', error);
       } finally {
         this.loading = false;
       }
     },
     downloadYaml(item: Stack | PkgManager) {
-      let yamlContent = "";
-      if ("base" in item && "packages" in item && "pkgmanager" in item) {
+      let yamlContent = '';
+      if ('base' in item && 'packages' in item && 'pkgmanager' in item) {
         yamlContent = `- name: "${item.name}"
   base: "${item.base}"
   packages: ["${(item.packages as string[]).join('", "')}"]
   pkgmanager: "${item.pkgmanager}"
   builtin: ${item.builtIn ?? false}`;
-      } else if ("cmdinstall" in item && "cmdupdate" in item) {
+      } else if ('cmdinstall' in item && 'cmdupdate' in item) {
         yamlContent = `- name: ${item.name}
   model: 2
   needSudo: ${item.needSudo}
@@ -362,9 +362,9 @@ export default defineComponent({
         yamlContent = `name: ${(item as Stack | PkgManager).name}`;
       }
 
-      const blob = new Blob([yamlContent], { type: "text/yaml" });
+      const blob = new Blob([yamlContent], { type: 'text/yaml' });
       const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
+      const a = document.createElement('a');
       a.href = url;
       a.download = `${item.name}.yml`;
       document.body.appendChild(a);

@@ -27,21 +27,21 @@
         >content_copy</span
       >
       <span class="material-symbols-outlined align-middle" v-else>check</span>
-      {{ copied ? "Copied!" : "Copy Command" }}
+      {{ copied ? 'Copied!' : 'Copy Command' }}
     </button>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref, computed } from 'vue';
 
-const tab = ref<"curl" | "wget">("curl");
+const tab = ref<'curl' | 'wget'>('curl');
 const copied = ref(false);
 
 const command = computed(() =>
-  tab.value === "curl"
-    ? "curl -s https://apx.vanillaos.org/install.sh | bash"
-    : "wget -qO- https://apx.vanillaos.org/install.sh | bash",
+  tab.value === 'curl'
+    ? 'curl -s https://apx.vanillaos.org/install.sh | bash'
+    : 'wget -qO- https://apx.vanillaos.org/install.sh | bash'
 );
 
 function copy() {
