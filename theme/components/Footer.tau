@@ -1,0 +1,64 @@
+<footer class="bg-[#101010] py-10 text-white">
+  <div class="flex flex-col items-center justify-center gap-8 px-4 sm:px-10 lg:px-20">
+    <div class="flex flex-col flex-wrap items-center justify-center gap-6 border-b border-[#333836] pb-10 sm:flex-row sm:px-10">
+      <p class="text-center text-[#727976] sm:text-left">Apx is made possible thanks to the following projects.</p>
+      <div class="mt-4 flex flex-wrap items-center justify-center gap-6 sm:mt-0">
+        <a href="https://go.dev" target="_blank" class="flex items-center justify-center">
+          <div class="icon transition-all duration-300 ease-in-out hover:scale-110" style="background-color:#727976;-webkit-mask:url(/assets/components/footer/icons/go.svg) no-repeat center;mask:url(/assets/components/footer/icons/go.svg) no-repeat center;-webkit-mask-size:contain;mask-size:contain;width:32px;height:32px" onmouseover="this.style.backgroundColor='#02ADD7'" onmouseout="this.style.backgroundColor='#727976'"></div>
+        </a>
+        <a href="https://vanillaos.org" target="_blank" class="flex items-center justify-center">
+          <div class="icon transition-all duration-300 ease-in-out hover:scale-110" style="background-color:#727976;-webkit-mask:url(/assets/components/footer/icons/vanillaos.svg) no-repeat center;mask:url(/assets/components/footer/icons/vanillaos.svg) no-repeat center;-webkit-mask-size:contain;mask-size:contain;width:32px;height:32px" onmouseover="this.style.backgroundColor='#FCCB44'" onmouseout="this.style.backgroundColor='#727976'"></div>
+        </a>
+        <a href="https://github.com" target="_blank" class="flex items-center justify-center">
+          <div class="icon transition-all duration-300 ease-in-out hover:scale-110" style="background-color:#727976;-webkit-mask:url(/assets/components/footer/icons/github.svg) no-repeat center;mask:url(/assets/components/footer/icons/github.svg) no-repeat center;-webkit-mask-size:contain;mask-size:contain;width:32px;height:32px" onmouseover="this.style.backgroundColor='#FFFFFF'" onmouseout="this.style.backgroundColor='#727976'"></div>
+        </a>
+        <a href="https://docker.com" target="_blank" class="flex items-center justify-center">
+          <div class="icon transition-all duration-300 ease-in-out hover:scale-110" style="background-color:#727976;-webkit-mask:url(/assets/components/footer/icons/docker.svg) no-repeat center;mask:url(/assets/components/footer/icons/docker.svg) no-repeat center;-webkit-mask-size:contain;mask-size:contain;width:32px;height:32px" onmouseover="this.style.backgroundColor='#2496ED'" onmouseout="this.style.backgroundColor='#727976'"></div>
+        </a>
+        <a href="https://distrobox.it" target="_blank" class="flex items-center justify-center">
+          <div class="icon transition-all duration-300 ease-in-out hover:scale-110" style="background-color:#727976;-webkit-mask:url(/assets/components/footer/icons/distrobox.svg) no-repeat center;mask:url(/assets/components/footer/icons/distrobox.svg) no-repeat center;-webkit-mask-size:contain;mask-size:contain;width:32px;height:32px" onmouseover="this.style.backgroundColor='#F1E1D1'" onmouseout="this.style.backgroundColor='#727976'"></div>
+        </a>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-16 lg:flex lg:flex-row lg:gap-48">
+      <div class="flex flex-col gap-2">
+        <h3 class="text-opacity-70 text-base font-semibold text-white">Help</h3>
+        <a href="https://docs.vanillaos.org/collections/apx" class="text-opacity-40 text-white hover:underline">Documentation</a>
+        <a href="https://docs.vanillaos.org/apx/en/getting-started" class="text-opacity-40 text-white hover:underline">Getting Started</a>
+        <a href="https://github.com/Vanilla-OS/apx?tab=readme-ov-file#community-packages" class="text-opacity-40 text-white hover:underline">Package for Your Distribution</a>
+        <a href="/community" class="text-opacity-40 text-white hover:underline">Sharing Stacks</a>
+        <a href="https://docs.vanillaos.org/apx/en/working-w-stacks" class="text-opacity-40 text-white hover:underline">Creating Stacks</a>
+      </div>
+      <div class="flex flex-col gap-2">
+        <h3 class="text-opacity-70 text-base font-semibold text-white">Developers</h3>
+        <a href="https://github.com/Vanilla-OS/apx" class="text-opacity-40 text-white hover:underline">Source Code</a>
+        <a href="https://github.com/Vanilla-OS/apx/issues" class="text-opacity-40 text-white hover:underline">Report a bug</a>
+      </div>
+      <div class="flex flex-col gap-2">
+        <h3 class="text-opacity-70 text-base font-semibold text-white">Get Apx</h3>
+        <a href="/install" class="text-opacity-40 text-white hover:underline">Install</a>
+        <a href="https://github.com/Vanilla-OS/apx" class="text-opacity-40 text-white hover:underline">Build From Source</a>
+      </div>
+      <div class="flex flex-col gap-2">
+        <h3 class="text-opacity-70 text-base font-semibold text-white">Community</h3>
+        <a href="https://github.com/orgs/Vanilla-OS/discussions" class="text-opacity-40 text-white hover:underline">GitHub</a>
+        <a href="https://vanillaos.org/community" class="text-opacity-40 text-white hover:underline">Discord Community</a>
+        <a href="/community" class="text-opacity-40 text-white hover:underline">Community Assets</a>
+        <a href="https://apx-community.vanillaos.org/feed.xml" class="text-opacity-40 text-white hover:underline">Community Assets Feed</a>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col flex-wrap items-center justify-between gap-6 px-4 pt-10 sm:flex-row sm:px-10 lg:px-20">
+    <div class="flex flex-col items-center gap-5 sm:flex-row">
+      <img src="/assets/components/footer/logo.svg" alt="Logo" />
+      <div class="flex flex-col gap-2 text-center sm:text-left">
+        <p class="text-opacity-40 text-white">All trademarks and logos are the property of their respective owners.</p>
+        <p class="text-opacity-40 text-white">Apx, Copyright 2026</p>
+      </div>
+    </div>
+    <div class="flex flex-col gap-1 lg:text-center">
+      <p class="text-opacity-40 text-white">Made with coffee by <span class="text-green-500">&lt;developers&gt;</span></p>
+      <p class="text-opacity-40 text-white">Sponsored by <a href="https://fabricators.ltd" class="text-green-500 hover:underline">fabricators.ltd</a></p>
+    </div>
+  </div>
+</footer>

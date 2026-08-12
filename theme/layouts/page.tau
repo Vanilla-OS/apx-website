@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{description || site.description}" />
+    <meta name="color-scheme" content="light dark" />
+    <title>{#if title}{title} | {/if}{site.title}</title>
+    <link rel="stylesheet" href="/assets/tailwind.css" />
+    <link rel="stylesheet" href="/assets/{assets?.['apx.css']}" />
+    <script src="/assets/{assets?.['apx.js']}" defer></script>
+  </head>
+  <body>
+    <Header />
+    <main>
+      {@html content}
+    </main>
+    <Footer />
+  </body>
+</html>

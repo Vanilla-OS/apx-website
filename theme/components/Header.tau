@@ -1,0 +1,67 @@
+<a href="#main" aria-label="Skip to main content" class="skip-to-content">Skip to main content</a>
+<nav>
+  <div class="border-opacity-20 flex flex-row items-center justify-between border-b border-white/5 bg-[#101010] px-4 py-5 text-black sm:px-16">
+    <a href="/">
+      <img
+        src="/assets/logo.svg"
+        alt="Apx Logo"
+        class="h-8 duration-300 ease-in-out hover:scale-110"
+        style="filter: drop-shadow(0 0 0px transparent)"
+        onmouseover="this.style.filter='drop-shadow(0 0 5px #24FF93)'"
+        onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
+      />
+    </a>
+    <div class="flex flex-row items-center gap-4 text-base font-normal opacity-80 sm:gap-8">
+      <button
+        id="menu-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        class="ml-auto inline-flex rounded p-3 text-gray-300 outline-none hover:bg-gray-700 hover:text-white lg:hidden"
+      >
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      {#each theme.nav.links.first as link}
+        <a href={link.url} class="hover:text-opacity-80 hidden text-white transition-colors duration-20 lg:inline-flex">{link.text}</a>
+      {/each}
+    </div>
+  </div>
+  <div class="hidden flex-col items-center justify-between bg-[#101010] px-4 py-2 sm:flex-row sm:px-16 lg:flex">
+    <p class="js-release-tag mb-4 font-normal text-white opacity-40 sm:mb-0">Loading...</p>
+    <div class="flex flex-col items-center gap-4 text-base font-normal opacity-80 sm:flex-row sm:gap-8">
+      <div class="flex flex-row items-center gap-4">
+        {#each theme.nav.links.second as link}
+          <a href={link.url} class="hover:text-opacity-80 text-white transition-colors duration-20">{link.text}</a>
+        {/each}
+      </div>
+      <div class="mt-4 flex flex-row items-center justify-center gap-2 sm:mt-0 sm:flex-row">
+        <a href="https://github.com/Vanilla-OS/apx" class="rounded-full border border-white px-5 py-2 text-base text-white transition duration-200 hover:bg-white hover:text-black">Source Code</a>
+        <a href="/install" class="rounded-full bg-[#24FF93] px-5 py-2 text-base font-medium text-black transition duration-200 hover:bg-green-500">Install</a>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden bg-opacity-20 fixed inset-0 z-50 items-center justify-center bg-black backdrop-blur-md">
+    <button type="button" class="js-menu-close absolute top-7 right-7 text-gray-300 mix-blend-difference">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="w-11/12 max-w-md rounded-lg bg-[#101010] p-6">
+      <div class="flex flex-col items-center gap-4">
+        {#each theme.nav.links.first as link}
+          <a href={link.url} class="text-white js-mobile-link">{link.text}</a>
+        {/each}
+      </div>
+      <hr class="border-opacity-20 my-4 border border-white" />
+      <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center gap-4 text-base font-light">
+          {#each theme.nav.links.second as link}
+            <a href={link.url} class="text-white js-mobile-link">{link.text}</a>
+          {/each}
+        </div>
+        <div class="mt-4 flex flex-col gap-2">
+          <a href="https://github.com/Vanilla-OS/apx" class="rounded-full border border-white px-10 py-3 text-center text-base text-white transition duration-200 hover:bg-white hover:text-black">Source Code</a>
+          <a href="/install" class="rounded-full bg-green-400 px-4 py-2 text-center text-base text-black transition duration-200 hover:bg-green-500 js-mobile-link">Install</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

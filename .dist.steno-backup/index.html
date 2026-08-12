@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+      content="A versatile command-line interface (CLI) tool designed to simplify the management of operating system containers." />
+    <meta name="color-scheme" content="light dark" />
+    <title>Apx</title>
+    <link rel="stylesheet" href="/assets/tailwind.css" />
+    <link rel="stylesheet" href="/assets/apx.aea8af8f.css" />
+    <script src="/assets/apx.d55b3f54.js" defer></script>
+    <link rel="icon" href="/favicon.svg">
+    <meta name="keywords"
+      content="Apx, Vanilla OS, Vanilla, OS, VanillaOS, Apx Vanilla OS, Apx VanillaOS">
+    <meta property="og:title" content="Apx">
+    <meta property="og:description"
+      content="A versatile command-line interface (CLI) tool designed to simplify the management of operating system containers.">
+    <meta property="og:image" content="/assets/cover.png">
+    <meta property="og:url" content="https://apx.vanillaos.org">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Apx">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Apx">
+    <meta name="twitter:description"
+      content="A versatile command-line interface (CLI) tool designed to simplify the management of operating system containers.">
+    <meta name="twitter:image" content="/assets/cover.png">
+    <meta name="twitter:url" content="https://apx.vanillaos.org">
+    <meta name="twitter:site" content="https://vanillaos.org/">
+    <meta name="twitter:creator" content="@VanillaOSLinux">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+  </head>
+  <body>
+    <a href="#main" aria-label="Skip to main content"
+      class="skip-to-content">Skip to main content</a>
+    <nav>
+      <div
+        class="border-opacity-20 flex flex-row items-center justify-between border-b border-white/5 bg-[#101010] px-4 py-5 text-black sm:px-16">
+        <a href="/">
+          <img
+            src="/assets/logo.svg"
+            alt="Apx Logo"
+            class="h-8 duration-300 ease-in-out hover:scale-110"
+            style="filter: drop-shadow(0 0 0px transparent)"
+            onmouseover="this.style.filter='drop-shadow(0 0 5px #24FF93)'"
+            onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
+          />
+        </a>
+        <div
+          class="flex flex-row items-center gap-4 text-base font-normal opacity-80 sm:gap-8">
+          <button
+            id="menu-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            class="ml-auto inline-flex rounded p-3 text-gray-300 outline-none hover:bg-gray-700 hover:text-white lg:hidden"
+          >
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+
+          <a href=https://docs.vanillaos.org/apx/en/getting-started
+            class="hover:text-opacity-80 hidden text-white transition-colors duration-20 lg:inline-flex">Getting Started</a>
+
+          <a href=https://docs.vanillaos.org/collections/apx
+            class="hover:text-opacity-80 hidden text-white transition-colors duration-20 lg:inline-flex">Documentation</a>
+
+          <a href=https://github.com/Vanilla-OS/apx
+            class="hover:text-opacity-80 hidden text-white transition-colors duration-20 lg:inline-flex">Support</a>
+
+          <a href=/community
+            class="hover:text-opacity-80 hidden text-white transition-colors duration-20 lg:inline-flex">Community Assets</a>
+        </div>
+      </div>
+      <div
+        class="hidden flex-col items-center justify-between bg-[#101010] px-4 py-2 sm:flex-row sm:px-16 lg:flex">
+        <p
+          class="js-release-tag mb-4 font-normal text-white opacity-40 sm:mb-0">Loading...</p>
+        <div
+          class="flex flex-col items-center gap-4 text-base font-normal opacity-80 sm:flex-row sm:gap-8">
+          <div class="flex flex-row items-center gap-4">
+            <a href=https://docs.vanillaos.org/apx/en/working-w-subsystems
+              class="hover:text-opacity-80 text-white transition-colors duration-20">Subsystems</a>
+
+            <a href=https://docs.vanillaos.org/apx/en/working-w-stacks
+              class="hover:text-opacity-80 text-white transition-colors duration-20">Stacks</a>
+
+            <a href=https://docs.vanillaos.org/apx/en/understanding-pmss
+              class="hover:text-opacity-80 text-white transition-colors duration-20">Package Managers</a>
+          </div>
+          <div
+            class="mt-4 flex flex-row items-center justify-center gap-2 sm:mt-0 sm:flex-row">
+            <a href="https://github.com/Vanilla-OS/apx"
+              class="rounded-full border border-white px-5 py-2 text-base text-white transition duration-200 hover:bg-white hover:text-black">Source Code</a>
+            <a href="/install"
+              class="rounded-full bg-[#24FF93] px-5 py-2 text-base font-medium text-black transition duration-200 hover:bg-green-500">Install</a>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu"
+        class="hidden bg-opacity-20 fixed inset-0 z-50 items-center justify-center bg-black backdrop-blur-md">
+        <button type="button"
+          class="js-menu-close absolute top-7 right-7 text-gray-300 mix-blend-difference">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="w-11/12 max-w-md rounded-lg bg-[#101010] p-6">
+          <div class="flex flex-col items-center gap-4">
+            <a href=https://docs.vanillaos.org/apx/en/getting-started
+              class="text-white js-mobile-link">Getting Started</a>
+
+            <a href=https://docs.vanillaos.org/collections/apx
+              class="text-white js-mobile-link">Documentation</a>
+
+            <a href=https://github.com/Vanilla-OS/apx
+              class="text-white js-mobile-link">Support</a>
+
+            <a href=/community
+              class="text-white js-mobile-link">Community Assets</a>
+          </div>
+          <hr class="border-opacity-20 my-4 border border-white" />
+          <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center gap-4 text-base font-light">
+              <a href=https://docs.vanillaos.org/apx/en/working-w-subsystems
+                class="text-white js-mobile-link">Subsystems</a>
+
+              <a href=https://docs.vanillaos.org/apx/en/working-w-stacks
+                class="text-white js-mobile-link">Stacks</a>
+
+              <a href=https://docs.vanillaos.org/apx/en/understanding-pmss
+                class="text-white js-mobile-link">Package Managers</a>
+            </div>
+            <div class="mt-4 flex flex-col gap-2">
+              <a href="https://github.com/Vanilla-OS/apx"
+                class="rounded-full border border-white px-10 py-3 text-center text-base text-white transition duration-200 hover:bg-white hover:text-black">Source Code</a>
+              <a href="/install"
+                class="rounded-full bg-green-400 px-4 py-2 text-center text-base text-black transition duration-200 hover:bg-green-500 js-mobile-link">Install</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div
+        class="relative flex h-[750px] w-screen items-center justify-center bg-cover bg-center"
+        style="background-image: url('/assets/components/hero-bg.png')"
+      >
+        <div class="flex h-full flex-col items-center justify-between">
+          <div
+            class="relative z-10 flex h-full flex-col items-center justify-center gap-6 text-center"
+          >
+            <div
+              class="terminal flex flex-col items-start rounded-md bg-black p-4 text-green-400"
+            >
+              <span data-apx-code
+                class="typing-effect font-mono text-lg"></span>
+            </div>
+            <div class="mt-4 flex flex-col items-center gap-4">
+              <h1
+                data-apx-typed
+                class="max-w-[450px] text-5xl leading-tight font-semibold lg:text-6xl"
+              ></h1>
+              <a
+                data-apx-cta
+                href="https://docs.vanillaos.org/apx/en/getting-started"
+                class="mt-5 rounded-full bg-white px-7 py-2 text-lg font-medium text-black opacity-0 transition duration-200 hover:bg-green-500 lg:text-lg"
+              >Getting Started</a>
+            </div>
+          </div>
+          <a
+            href="#what-is"
+            class="text-opacity-40 z-10 mb-10 animate-bounce text-white"
+          >
+            <span
+              class="material-symbols-outlined text-4xl transition duration-200 hover:text-white"
+            >
+        keyboard_arrow_down
+      </span>
+          </a>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-4 pt-20 sm:px-6 lg:px-8">
+        <div class="mb-10 flex flex-col gap-32 pb-44" id="main">
+          <section
+            id="what-is"
+            class="flex flex-col items-center justify-center gap-8 text-center"
+          >
+            <img
+              src="/assets/components/decorations/ellipse-3.png"
+              alt="Blurry Circle"
+              class="absolute left-0 w-[20rem] select-none lg:w-[40rem]"
+            />
+            <h2 class="text-3xl font-semibold lg:text-5xl">
+        What is <span class="text-green-500">Apx</span>?
+      </h2>
+            <p class="text-xl font-normal lg:w-[35rem] lg:text-2xl">
+        Apx is a platform that streamlines dev environments into portable,
+        reproducible subsystems, seamlessly integrating them with the system.
+      </p>
+            <picture>
+              <source
+                media="(prefers-color-scheme: dark)"
+                srcset="/assets/components/what-is-dark.svg"
+              />
+              <source
+                media="(prefers-color-scheme: light)"
+                srcset="/assets/components/what-is.svg"
+              />
+              <img
+                alt="A diagram showing how Apx works"
+                src="/assets/components/what-is.svg"
+                class="lg:w-[50rem]"
+              />
+            </picture>
+          </section>
+          <section
+            id="subsystems"
+            class="flex flex-col flex-wrap items-center justify-center gap-12 lg:flex-row"
+          >
+            <picture>
+              <source
+                media="(prefers-color-scheme: dark)"
+                srcset="/assets/components/subsystems-dark.svg"
+              />
+              <source
+                media="(prefers-color-scheme: light)"
+                srcset="/assets/components/subsystems.svg"
+              />
+              <img
+                src="/assets/components/subsystems.svg"
+                alt="A diagram showing how Apx subsystems work"
+                class="w-[10rem] lg:w-[25rem]"
+              />
+            </picture>
+            <img
+              src="/assets/components/decorations/ellipse-1.png"
+              alt="Blurry Circle, decorative element"
+              class="absolute left-0 w-[20rem] select-none lg:w-[40rem]"
+            />
+            <div class="flex flex-col gap-4 text-center lg:text-left">
+              <h2 class="text-3xl font-semibold lg:text-5xl">
+          What are
+          <span class="text-green-500">Subsystems</span>?
+        </h2>
+              <p class="text-xl font-normal lg:w-[40rem] lg:text-2xl">
+          Apx subsystems are portable, reproducible dev environments that can be
+          shared and reused across projects.
+        </p>
+            </div>
+          </section>
+          <section
+            id="vscode"
+            class="flex flex-col flex-wrap items-center justify-center gap-12 text-center"
+          >
+            <picture>
+              <source
+                media="(prefers-color-scheme: dark)"
+                srcset="/assets/components/vscode-dark.svg"
+              />
+              <source
+                media="(prefers-color-scheme: light)"
+                srcset="/assets/components/vscode.svg"
+              />
+              <img
+                src="/assets/components/vscode.svg"
+                alt="An illustration of VSCode, which inside the window it has a demo Go code"
+              />
+            </picture>
+            <p class="text-xl lg:w-[35rem] lg:text-2xl">
+        Apx integrates them with your system, providing that native feedback
+        you're used to.
+      </p>
+          </section>
+          <section
+            id="stack"
+            class="flex flex-row flex-wrap items-center justify-center gap-12 lg:mb-64"
+          >
+            <img
+              src="/assets/components/decorations/ellipse-2.png"
+              alt="Blurry Circle, decorative element"
+              class="absolute left-0 mb-[20rem] w-[20rem] select-none lg:w-[40rem]"
+            />
+            <picture>
+              <source
+                media="(prefers-color-scheme: dark)"
+                srcset="/assets/components/stack-dark.png"
+              />
+              <source
+                media="(prefers-color-scheme: light)"
+                srcset="/assets/components/stack.png"
+              />
+              <img
+                src="/assets/components/stack.png"
+                alt="A diagram with a few icons of different technologies, like VSCode, Python, Go, and React, all being stacks"
+                class="w-[10rem] lg:w-[25rem]"
+              />
+            </picture>
+            <div class="flex flex-col gap-4 text-center lg:text-left">
+              <h2 class="text-2xl font-semibold lg:text-5xl">
+          Share the perfect
+          <span class="text-green-500">Stack</span>
+        </h2>
+              <div
+                class="flex flex-col gap-12 text-xl font-normal lg:w-[40rem] lg:text-2xl"
+              >
+                <p>
+            Subsystems are created using stacks, a set of instructions that
+            defines exactly what must be included in your subsystem.
+          </p>
+                <p>
+            Got the best configuration for your project? Share it with your
+            colleagues so that they can replicate it!
+          </p>
+              </div>
+            </div>
+          </section>
+          <section
+            id="distribution"
+            class="flex flex-col items-center justify-center gap-40 text-center"
+          >
+            <div
+              class="flex flex-col items-center justify-center gap-8 text-center"
+            >
+              <h2 class="text-2xl font-semibold lg:text-6xl">
+          What is your
+          <span class="text-green-500">distribution</span>?
+        </h2>
+              <p class="text-xl font-normal lg:w-2xl lg:text-2xl">
+          Does not matter. Base your subsystems on top of any Linux
+          distribution, all you need is a Docker image, that’s all.
+        </p>
+            </div>
+            <img
+              src="/assets/components/decorations/ellipse-3.png"
+              alt="Blurry Circle, decorative element"
+              class="absolute left-0 w-80 select-none lg:w-2xl"
+            />
+            <div
+              class="flex flex-col items-center justify-center gap-12 text-center md:flex-row lg:gap-20"
+            >
+              <a href="https://rockylinux.org/" target="_blank"
+                rel="noopener noreferrer">
+                <img
+                  src="/assets/components/distributions/rocky.svg"
+                  alt="Rocky Linux"
+                  class="w-24 transition-all duration-300 ease-in-out hover:scale-110 active:scale-90 md:w-24 lg:w-40"
+                  style="filter: drop-shadow(0 0 0px transparent)"
+                  onmouseover="this.style.filter='drop-shadow(0 0 10px #10b981)'"
+                  onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
+                />
+              </a>
+              <a href="https://fedoraproject.org/" target="_blank"
+                rel="noopener noreferrer">
+                <img
+                  src="/assets/components/distributions/fedora.svg"
+                  alt="Fedora"
+                  class="w-24 transition-all duration-300 ease-in-out hover:scale-110 active:scale-90 md:w-24 lg:w-40"
+                  style="filter: drop-shadow(0 0 0px transparent)"
+                  onmouseover="this.style.filter='drop-shadow(0 0 10px #3C6EB4)'"
+                  onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
+                />
+              </a>
+              <a href="https://vanillaos.org/" target="_blank"
+                rel="noopener noreferrer">
+                <img
+                  src="/assets/components/distributions/vanilla.svg"
+                  alt="Vanilla OS"
+                  class="w-24 transition-all duration-300 ease-in-out hover:scale-110 active:scale-90 md:w-24 lg:w-40"
+                  style="filter: drop-shadow(0 0 0px transparent)"
+                  onmouseover="this.style.filter='drop-shadow(0 0 10px #f9a932)'"
+                  onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
+                />
+              </a>
+              <a href="https://ubuntu.com/" target="_blank"
+                rel="noopener noreferrer">
+                <img
+                  src="/assets/components/distributions/ubuntu.svg"
+                  alt="Ubuntu"
+                  class="w-24 transition-all duration-300 ease-in-out hover:scale-110 active:scale-90 md:w-24 lg:w-40"
+                  style="filter: drop-shadow(0 0 0px transparent)"
+                  onmouseover="this.style.filter='drop-shadow(0 0 10px #E95420)'"
+                  onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
+                />
+              </a>
+              <a href="https://archlinux.org/" target="_blank"
+                rel="noopener noreferrer">
+                <img
+                  src="/assets/components/distributions/arch.svg"
+                  alt="Arch Linux"
+                  class="w-24 transition-all duration-300 ease-in-out hover:scale-110 active:scale-90 md:w-24 lg:w-40"
+                  style="filter: drop-shadow(0 0 0px transparent)"
+                  onmouseover="this.style.filter='drop-shadow(0 0 10px #1793D1)'"
+                  onmouseout="this.style.filter='drop-shadow(0 0 0px transparent)'"
+                />
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-[#101010] py-10 text-white">
+      <div
+        class="flex flex-col items-center justify-center gap-8 px-4 sm:px-10 lg:px-20">
+        <div
+          class="flex flex-col flex-wrap items-center justify-center gap-6 border-b border-[#333836] pb-10 sm:flex-row sm:px-10">
+          <p
+            class="text-center text-[#727976] sm:text-left">Apx is made possible thanks to the following projects.</p>
+          <div
+            class="mt-4 flex flex-wrap items-center justify-center gap-6 sm:mt-0">
+            <a href="https://go.dev" target="_blank"
+              class="flex items-center justify-center">
+              <div
+                class="icon transition-all duration-300 ease-in-out hover:scale-110"
+                style="background-color:#727976;-webkit-mask:url(/assets/components/footer/icons/go.svg) no-repeat center;mask:url(/assets/components/footer/icons/go.svg) no-repeat center;-webkit-mask-size:contain;mask-size:contain;width:32px;height:32px"
+                onmouseover="this.style.backgroundColor='#02ADD7'"
+                onmouseout="this.style.backgroundColor='#727976'"></div>
+            </a>
+            <a href="https://vanillaos.org" target="_blank"
+              class="flex items-center justify-center">
+              <div
+                class="icon transition-all duration-300 ease-in-out hover:scale-110"
+                style="background-color:#727976;-webkit-mask:url(/assets/components/footer/icons/vanillaos.svg) no-repeat center;mask:url(/assets/components/footer/icons/vanillaos.svg) no-repeat center;-webkit-mask-size:contain;mask-size:contain;width:32px;height:32px"
+                onmouseover="this.style.backgroundColor='#FCCB44'"
+                onmouseout="this.style.backgroundColor='#727976'"></div>
+            </a>
+            <a href="https://github.com" target="_blank"
+              class="flex items-center justify-center">
+              <div
+                class="icon transition-all duration-300 ease-in-out hover:scale-110"
+                style="background-color:#727976;-webkit-mask:url(/assets/components/footer/icons/github.svg) no-repeat center;mask:url(/assets/components/footer/icons/github.svg) no-repeat center;-webkit-mask-size:contain;mask-size:contain;width:32px;height:32px"
+                onmouseover="this.style.backgroundColor='#FFFFFF'"
+                onmouseout="this.style.backgroundColor='#727976'"></div>
+            </a>
+            <a href="https://docker.com" target="_blank"
+              class="flex items-center justify-center">
+              <div
+                class="icon transition-all duration-300 ease-in-out hover:scale-110"
+                style="background-color:#727976;-webkit-mask:url(/assets/components/footer/icons/docker.svg) no-repeat center;mask:url(/assets/components/footer/icons/docker.svg) no-repeat center;-webkit-mask-size:contain;mask-size:contain;width:32px;height:32px"
+                onmouseover="this.style.backgroundColor='#2496ED'"
+                onmouseout="this.style.backgroundColor='#727976'"></div>
+            </a>
+            <a href="https://distrobox.it" target="_blank"
+              class="flex items-center justify-center">
+              <div
+                class="icon transition-all duration-300 ease-in-out hover:scale-110"
+                style="background-color:#727976;-webkit-mask:url(/assets/components/footer/icons/distrobox.svg) no-repeat center;mask:url(/assets/components/footer/icons/distrobox.svg) no-repeat center;-webkit-mask-size:contain;mask-size:contain;width:32px;height:32px"
+                onmouseover="this.style.backgroundColor='#F1E1D1'"
+                onmouseout="this.style.backgroundColor='#727976'"></div>
+            </a>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-16 lg:flex lg:flex-row lg:gap-48">
+          <div class="flex flex-col gap-2">
+            <h3
+              class="text-opacity-70 text-base font-semibold text-white">Help</h3>
+            <a href="https://docs.vanillaos.org/collections/apx"
+              class="text-opacity-40 text-white hover:underline">Documentation</a>
+            <a href="https://docs.vanillaos.org/apx/en/getting-started"
+              class="text-opacity-40 text-white hover:underline">Getting Started</a>
+            <a
+              href="https://github.com/Vanilla-OS/apx?tab=readme-ov-file#community-packages"
+              class="text-opacity-40 text-white hover:underline">Package for Your Distribution</a>
+            <a href="/community"
+              class="text-opacity-40 text-white hover:underline">Sharing Stacks</a>
+            <a href="https://docs.vanillaos.org/apx/en/working-w-stacks"
+              class="text-opacity-40 text-white hover:underline">Creating Stacks</a>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h3
+              class="text-opacity-70 text-base font-semibold text-white">Developers</h3>
+            <a href="https://github.com/Vanilla-OS/apx"
+              class="text-opacity-40 text-white hover:underline">Source Code</a>
+            <a href="https://github.com/Vanilla-OS/apx/issues"
+              class="text-opacity-40 text-white hover:underline">Report a bug</a>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h3
+              class="text-opacity-70 text-base font-semibold text-white">Get Apx</h3>
+            <a href="/install"
+              class="text-opacity-40 text-white hover:underline">Install</a>
+            <a href="https://github.com/Vanilla-OS/apx"
+              class="text-opacity-40 text-white hover:underline">Build From Source</a>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h3
+              class="text-opacity-70 text-base font-semibold text-white">Community</h3>
+            <a href="https://github.com/orgs/Vanilla-OS/discussions"
+              class="text-opacity-40 text-white hover:underline">GitHub</a>
+            <a href="https://vanillaos.org/community"
+              class="text-opacity-40 text-white hover:underline">Discord Community</a>
+            <a href="/community"
+              class="text-opacity-40 text-white hover:underline">Community Assets</a>
+            <a href="https://apx-community.vanillaos.org/feed.xml"
+              class="text-opacity-40 text-white hover:underline">Community Assets Feed</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col flex-wrap items-center justify-between gap-6 px-4 pt-10 sm:flex-row sm:px-10 lg:px-20">
+        <div class="flex flex-col items-center gap-5 sm:flex-row">
+          <img src="/assets/components/footer/logo.svg" alt="Logo" />
+          <div class="flex flex-col gap-2 text-center sm:text-left">
+            <p
+              class="text-opacity-40 text-white">All trademarks and logos are the property of their respective owners.</p>
+            <p class="text-opacity-40 text-white">Apx, Copyright 2024</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-1 lg:text-center">
+          <p
+            class="text-opacity-40 text-white">Made with coffee by <span class="text-green-500">&lt;developers&gt;</span></p>
+          <p
+            class="text-opacity-40 text-white">Sponsored by <a href="https://fabricators.ltd" class="text-green-500 hover:underline">fabricators.ltd</a></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

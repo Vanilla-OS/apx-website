@@ -1,0 +1,12 @@
+{
+  "nodeModulesDir": "auto",
+  "tasks": {
+    "build": "deno run -A --minimum-dependency-age=0 jsr:@steno/steno@^0.11.1 build",
+    "dev": "deno run -A --minimum-dependency-age=0 jsr:@steno/steno@^0.11.1 dev",
+    "preview": "deno run -A --minimum-dependency-age=0 jsr:@steno/steno@^0.11.1 preview"
+  },
+  "imports": {
+    "@steno/steno": "jsr:@steno/steno@^0.11.1",
+    "@steno/theme-marketing-minimal": "jsr:@steno/theme-marketing-minimal@^0.11.0"
+  }
+}
