@@ -3,5 +3,5 @@ dist
 .cloudflared
 node_modules
 .DS_Store
-.dist.steno-beckup
+.dist.steno-backup
 build-cache.json
