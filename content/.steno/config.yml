@@ -1,0 +1,69 @@
+title: "Apx"
+description: "A versatile command-line interface (CLI) tool designed to simplify the management of operating system containers."
+author: "Vanilla OS Contributors"
+
+plugins:
+  - package: "jsr:@steno/plugin-tailwind"
+    mode: trusted
+
+contentDir: "content"
+publicDir: "public"
+output: "dist"
+shortUrls: true
+theme: "./theme"
+
+head:
+  - tag: link
+    rel: icon
+    href: /favicon.svg
+  - name: keywords
+    content: "Apx, Vanilla OS, Vanilla, OS, VanillaOS, Apx Vanilla OS, Apx VanillaOS"
+  - property: og:title
+    content: "Apx"
+  - property: og:description
+    content: "A versatile command-line interface (CLI) tool designed to simplify the management of operating system containers."
+  - property: og:image
+    content: /assets/cover.png
+  - property: og:url
+    content: https://apx.vanillaos.org
+  - property: og:type
+    content: website
+  - property: og:site_name
+    content: "Apx"
+  - name: twitter:card
+    content: summary_large_image
+  - name: twitter:title
+    content: "Apx"
+  - name: twitter:description
+    content: "A versatile command-line interface (CLI) tool designed to simplify the management of operating system containers."
+  - name: twitter:image
+    content: /assets/cover.png
+  - name: twitter:url
+    content: https://apx.vanillaos.org
+  - name: twitter:site
+    content: https://vanillaos.org/
+  - name: twitter:creator
+    content: "@VanillaOSLinux"
+  - tag: link
+    rel: stylesheet
+    href: https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined
+
+themeConfig:
+  nav:
+    links:
+      first:
+        - text: "Getting Started"
+          url: "https://docs.vanillaos.org/apx/en/getting-started"
+        - text: "Documentation"
+          url: "https://docs.vanillaos.org/collections/apx"
+        - text: "Support"
+          url: "https://github.com/Vanilla-OS/apx"
+        - text: "Community Assets"
+          url: "/community"
+      second:
+        - text: "Subsystems"
+          url: "https://docs.vanillaos.org/apx/en/working-w-subsystems"
+        - text: "Stacks"
+          url: "https://docs.vanillaos.org/apx/en/working-w-stacks"
+        - text: "Package Managers"
+          url: "https://docs.vanillaos.org/apx/en/understanding-pmss"

@@ -1,28 +1,22 @@
 <div align="center">
 <h1>Apx Website</h1>
-<small>Powered by <a href="https://vitepress.dev/">VitePress</a></small>
+<small>Powered by <a href="https://github.com/stenopress/steno">Steno</a></small>
 </div>
 
 ---
 
 ## Development
 
-Make sure you have [Node.js](https://nodejs.org) and [PNPM](https://pnpm.io) installed.
-
-### Install Dependencies
-
-```bash
-pnpm install
-```
+Make sure you have [Deno](https://deno.com/) installed.
 
 ### Development Server
 
 ```bash
-pnpm dev
+deno task dev
 ```
 
 ### Build
 
 ```bash
-pnpm build
+deno task build
 ```

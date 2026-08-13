@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
 @import 'tailwindcss';
 
 html {
@@ -8,7 +7,8 @@ html {
 }
 
 body {
-  @apply overflow-x-hidden bg-white text-black dark:bg-[#1C1C1C] dark:text-white;
+  @apply overflow-x-hidden bg-white text-black dark:bg-[#1C1C1C]
+    dark:text-white;
 }
 
 .material-symbols-outlined {
@@ -38,4 +38,17 @@ body {
   width: auto;
   height: auto;
   overflow: visible;
+}
+
+.fade-in {
+  animation: fade-in 0.5s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
