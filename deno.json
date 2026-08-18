@@ -6,7 +6,7 @@
     "preview": "deno run -A --minimum-dependency-age=0 jsr:@steno/steno@^0.11.1 preview"
   },
   "imports": {
-    "@steno/steno": "jsr:@steno/steno@^0.11.2",
+    "@steno/steno": "jsr:@steno/steno@^0.12.0",
     "@steno/theme-marketing-minimal": "jsr:@steno/theme-marketing-minimal@^0.12.0"
   }
 }
