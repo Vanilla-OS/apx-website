@@ -6,13 +6,15 @@
 ---
 
 ## Development
-Make sure you have [Deno](https://deno.com/) 
-installed.
+
+Make sure you have [Deno](https://deno.com/) installed.
 
 ### Development Server
+
 ```bash
 deno task dev
 ```
+
 ### Build
 
 ```bash
