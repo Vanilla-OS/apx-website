@@ -15,12 +15,9 @@
     "jsr:@std/path@0.223": "0.223.0",
     "jsr:@std/path@1.1.6": "1.1.6",
     "jsr:@std/toml@1.0.11": "1.0.11",
-    "jsr:@std/yaml@1.1.2": "1.1.2",
     "jsr:@std/yaml@1.2.0": "1.2.0",
     "jsr:@steno/steno@0.12": "0.12.0",
-    "jsr:@steno/steno@~0.11.2": "0.11.2",
     "jsr:@steno/theme-marketing-minimal@0.12": "0.12.0",
-    "npm:marked@18.0.7": "18.0.7",
     "npm:marked@18.0.9": "18.0.9"
   },
   "jsr": {
@@ -90,21 +87,8 @@
         "jsr:@std/collections"
       ]
     },
-    "@std/yaml@1.1.2": {
-      "integrity": "de612653c036749ba2044165e316f52412b0f0698afffb7ee80b5331d6d2abae"
-    },
     "@std/yaml@1.2.0": {
       "integrity": "20beb41e4983ba3437dbefac62b14061ab058e8a187596f19d28ff9035f6e6cf"
-    },
-    "@steno/steno@0.11.2": {
-      "integrity": "dab073ca94d3dcce6bbf5a36dbff2fbf82233f4c94d503805a348cc02f93dff3",
-      "dependencies": [
-        "jsr:@deno/emit",
-        "jsr:@std/path@1.1.6",
-        "jsr:@std/toml",
-        "jsr:@std/yaml@1.1.2",
-        "npm:marked@18.0.7"
-      ]
     },
     "@steno/steno@0.12.0": {
       "integrity": "77254532c6dfb661c47e94c015f8715637c7b2de0cd079ee85922f950a2cb087",
@@ -113,22 +97,18 @@
         "jsr:@std/media-types",
         "jsr:@std/path@1.1.6",
         "jsr:@std/toml",
-        "jsr:@std/yaml@1.2.0",
-        "npm:marked@18.0.9"
+        "jsr:@std/yaml",
+        "npm:marked"
       ]
     },
     "@steno/theme-marketing-minimal@0.12.0": {
       "integrity": "a3f2f35e02806d77065c7dccbeb0283158f0867c5eb2dcb1a9e6f86c876e9f04",
       "dependencies": [
-        "jsr:@steno/steno@0.12"
+        "jsr:@steno/steno"
       ]
     }
   },
   "npm": {
-    "marked@18.0.7": {
-      "integrity": "sha512-iDVQ5ldaiKXn6b2JroX5kgRfmwgqolW7NpaEzTl1k/2Zh1njIEN9yniyLV/mOvWwtsE8OGgkjsCYvijuPk1dtA==",
-      "bin": true
-    },
     "marked@18.0.9": {
       "integrity": "sha512-/Sa4qiiHZxf0/FQdBBowr9q4r10krCwMvpK48FUBdXdUXScDxiQGR9zCPrFgRVR5LU3iySOiIjy09ZQvADir1w==",
       "bin": true
@@ -136,7 +116,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@steno/steno@~0.11.2",
+      "jsr:@steno/steno@0.12",
       "jsr:@steno/theme-marketing-minimal@0.12"
     ]
   }
