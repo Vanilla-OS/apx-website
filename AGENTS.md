@@ -5,8 +5,8 @@
 Read this section before changing files, creating a commit, or opening a pull
 request.
 
-When generative AI contributes more than a trivial completion, add both of
-these trailers to every assisted commit:
+When generative AI contributes more than a trivial completion, add both of these
+trailers to every assisted commit:
 
 ```plain
 Assisted-by: <tool>:<model-version>

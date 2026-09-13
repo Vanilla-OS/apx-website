@@ -23,9 +23,13 @@ deno task build
 
 ## Use of Generative AI
 
-Maintainers may use generative AI tools as assistants while working on apx-website. Non-trivial assisted commits disclose the tool, model, and scope of the work.
+Maintainers may use generative AI tools as assistants while working on
+apx-website. Non-trivial assisted commits disclose the tool, model, and scope of
+the work.
 
-AI tools may assist with code comments, documentation, repetitive code, and issue triage. Maintainers make project decisions and review every assisted change before it is merged.
+AI tools may assist with code comments, documentation, repetitive code, and
+issue triage. Maintainers make project decisions and review every assisted
+change before it is merged.
 
 Use these trailers for non-trivial assisted commits:
 

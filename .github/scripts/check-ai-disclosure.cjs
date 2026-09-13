@@ -25,17 +25,16 @@ function commitDisclosure(commit) {
     .split(/\r?\n/)
     .filter((line) => /^AI(?:-| )Scope:/i.test(line));
   const validAssisted = assistedLines.every((line) =>
-    /^Assisted-by:\s*[^:\r\n]+:[^\s\r\n]+\s*$/i.test(line),
+    /^Assisted-by:\s*[^:\r\n]+:[^\s\r\n]+\s*$/i.test(line)
   );
   const validScope = scopeLines.every((line) =>
-    /^AI-Scope:\s*\S(?:.*\S)?\s*$/i.test(line),
+    /^AI-Scope:\s*\S(?:.*\S)?\s*$/i.test(line)
   );
   const disclosed = assistedLines.length > 0 || scopeLines.length > 0;
 
   return {
     disclosed,
-    valid:
-      disclosed &&
+    valid: disclosed &&
       assistedLines.length > 0 &&
       scopeLines.length > 0 &&
       validAssisted &&
@@ -55,7 +54,9 @@ function checkDisclosure(body, commits) {
     disclosed++;
     if (!result.valid) {
       errors.push(
-        `${commit.sha.slice(0, 7)} must contain valid Assisted-by and AI-Scope trailers.`,
+        `${
+          commit.sha.slice(0, 7)
+        } must contain valid Assisted-by and AI-Scope trailers.`,
       );
     }
   }
