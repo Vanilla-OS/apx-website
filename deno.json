@@ -7,6 +7,6 @@
   },
   "imports": {
     "@steno/steno": "jsr:@steno/steno@^0.12.0",
-    "@steno/theme-marketing-minimal": "jsr:@steno/theme-marketing-minimal@^0.12.0"
+    "@steno/theme-marketing-minimal": "jsr:@steno/theme-marketing-minimal@^0.13.0"
   }
 }
